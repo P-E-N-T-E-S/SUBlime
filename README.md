@@ -15,6 +15,9 @@
   <li>
     <a href="https://github.com/Nerebo">André Goes</a> - algcf@cesar.school 📩
   </li>
+  <li>
+    <a href="https://github.com/Tiagopbc">Tiago Cavalcanti</a> - tpbc@cesar.school 📩
+  </li>
 </ul>
 
 <!--
@@ -43,7 +46,7 @@
       <a href="https://github.com/Thomazrlima">
         <img src="https://avatars3.githubusercontent.com/Thomazrlima" width="100px;" alt="Foto de Thomaz"/><br>
         <sub>
-          <b>Thomaz R. Lima</b>
+          <b>Thomaz Lima</b>
         </sub>
       </a>
     </td>
@@ -51,7 +54,7 @@
       <a href="https://github.com/hsspedro">
         <img src="https://avatars.githubusercontent.com/hsspedro" width="100px;" alt="Foto de Pedro"/><br>
         <sub>
-          <b>Pedro S. Souza</b>
+          <b>Pedro Souza</b>
         </sub>
       </a>
     </td>
@@ -68,6 +71,14 @@
         <img src="https://avatars.githubusercontent.com/Sofia-Saraiva" width="100px;" alt="Foto de Sofia"/><br>
         <sub>
           <b>Sofia Saraiva</b>
+        </sub>
+      </a>
+    </td>
+      <td align="center">
+      <a href="https://github.com/Tiagopbc">
+        <img src="https://avatars.githubusercontent.com/Tiagopbc" width="100px;" alt="Foto de Tiago"/><br>
+        <sub>
+          <b>Tiago Cavalcanti</b>
         </sub>
       </a>
     </td>
