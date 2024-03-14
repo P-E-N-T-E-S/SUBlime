@@ -1,4 +1,117 @@
-# Projetos_3
+# G7 - Libreflix
+![GitHub repo size](https://img.shields.io/github/repo-size/P-E-N-T-E-S/G7?style=flat)
+![GitHub language count](https://img.shields.io/github/languages/count/P-E-N-T-E-S/G7?style=flat&logo=python)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/P-E-N-T-E-S/G7?style=flat&logo=github)
+![Commits](https://img.shields.io/github/commit-activity/t/P-E-N-T-E-S/G7?style=flat&logo=github)
+[![GitHub](https://img.shields.io/github/license/P-E-N-T-E-S/G7)](LICENSE.md)
+
+![libreflix-logo-24](https://github.com/P-E-N-T-E-S/G7/assets/126795323/aa838eef-ff31-4d4b-bfe4-9554475c0eba)
+
+## Visão Geral
+
+Este repositório faz parte do projeto Libreflix, uma plataforma de streaming de vídeo de código aberto. A parte de legendas é responsável por gerenciar e disponibilizar legendas para os vídeos hospedados na plataforma. O objetivo principal deste repositório é organizar e manter as legendas em diferentes idiomas para garantir uma experiência acessível e inclusiva para todos os usuários.
+
+## Como Contribuir
+
+Se você deseja contribuir com este repositório, siga estas etapas:
+
+1. Faça um fork do repositório.
+2. Adicione ou atualize as legendas conforme necessário.
+3. Siga as diretrizes e padrões fornecidos no diretório `/padroes`.
+4. Abra um pull request descrevendo suas alterações e as razões por trás delas.
+
+<p>Links Importantes</p>
+<ul>
+  <li>
+    <a  href=""
+      >Link do Site</a
+    >
+  </li>
+  <li>
+    <a  href="https://trello.com/invite/b/dfNl7JhX/ATTI468d889712155dde5091b5c52651de98C12170EB/g7-projetos"
+      >Link do Trello</a
+    >
+  </li>
+  <li>
+    <a  href=""
+      >Diagrama de Classes</a
+    >
+  </li>
+</ul>
+
+<p>SR1</p>
+<ul>
+  <li>
+    <a  href=""
+      >Protótipo de Baixa</a
+    >
+  </li>
+  <li>
+    <a  href=""
+      >ScreenCast - Protótipo de Baixa</a
+    >
+  </li>
+  <li>
+    <a  href=""
+      >Programação em par</a
+    >
+  </li>
+  <li>
+    <a  href=""
+      >Histórias</a
+    >
+  </li>
+  <li>
+    <a  href="https://github.com/P-E-N-T-E-S/G7/issues"
+      >Issue/Bug Tracker</a
+    >
+  </li>
+</ul>
+
+<p>SR2</p>
+<ul>
+  <li>
+    <a  href=""
+      >ScreenCast - Uso do Sistema</a
+    >
+  </li>
+  <li>
+    <a  href=""
+      >ScreenCast - Protótipo de Baixa (Usuário)</a
+    >
+  </li>
+  <li>
+    <a  href=""
+      >ScreenCast - Protótipo de Baixa</a
+    >
+  </li>
+  <li>
+    <a  href=""
+      >ScreenCast - Protótipo de Alta</a
+    >
+  </li>
+  <li>
+    <a  href=""
+      >Protótipo de Baixa</a
+    >
+  </li>
+  </li>
+  <li>
+    <a  href=""
+      >Programação em par</a
+    >
+  </li>
+  <li>
+    <a  href=""
+      >Histórias</a
+    >
+  </li>
+  <li>
+    <a  href="https://github.com/P-E-N-T-E-S/G7/issues"
+      >Issue/Bug Tracker</a
+    >
+  </li>
+</ul>
 
 ## 👩‍💻 Membros de CC
 
@@ -20,25 +133,25 @@
   </li>
 </ul>
 
-<!--
 ## 👨‍🎨 Membros de Design
 
 <ul>
   <li>
-    <a href="https://www.linkedin.com/in/clara-batista-sobral-de-oliveira-351947265/">Clara Sobral</a> - cbso@cesar.school 📩
+    <a href="lmwn@cesar.school">Larissa Maria Wanderley Novaes</a> - lmwn@cesar.school 📩
   </li>
   <li>
-    <a href="https://emillysaobento.carrd.co/?fbclid=PAAabKO9AleSjDVm8NMYDXGLUNwpeUD4miwivqiBgTNcZ-TlBikS4EclilYdA">Emilly São Bento</a> - eccsb@cesar.school 📩
+    <a href="lsmb@cesar.school">Letícia Souto Maior de Brito</a> - lsmb@cesar.school 📩
   </li>
   <li>
-    <a href="https://linktr.ee/DylanVieira?utm_source=linktree_admin_share">Dylan Vieira</a> - dvma@cesar.school 📩
+    <a href="mps3@cesar.school">Marina Passos de Siqueira</a> - mps3@cesar.school 📩
   </li>
   <li>
-    <a href="https://www.linkedin.com/in/jo%C3%A3ofilipemafraalmeida/">João Almeida</a> - jfma2@cesar.school 📩
+    <a href="alcs2@cesar.school">Ana Letícia da Costa Saraiva</a> - alcs2@cesar.school 📩
+  </li>
+  <li>
+    <a href="https://www.linkedin.com/in/jo%C3%A3ofilipemafraalmeida/">Lucas Maciel Freire</a> - lmf2@cesar.school 📩
   </li>
 </ul>
-
--->
 
 <table>
   <tr>
