@@ -7,11 +7,11 @@
 
 ![libreflix-logo-24](https://github.com/P-E-N-T-E-S/G7/assets/126795323/aa838eef-ff31-4d4b-bfe4-9554475c0eba)
 
-## Visão Geral
+## 👀 Visão Geral
 
 Este repositório faz parte do projeto Libreflix, uma plataforma de streaming de vídeo de código aberto. A parte de legendas é responsável por gerenciar e disponibilizar legendas para os vídeos hospedados na plataforma. O objetivo principal deste repositório é organizar e manter as legendas em diferentes idiomas para garantir uma experiência acessível e inclusiva para todos os usuários.
 
-## Como Contribuir
+## 🤝 Como Contribuir
 
 Se você deseja contribuir com este repositório, siga estas etapas:
 
@@ -20,7 +20,13 @@ Se você deseja contribuir com este repositório, siga estas etapas:
 3. Siga as diretrizes e padrões fornecidos no diretório `/padroes`.
 4. Abra um pull request descrevendo suas alterações e as razões por trás delas.
 
-<p>Links Importantes</p>
+
+## 📪 Entregas
+
+<details>
+
+<summary>Links Importantes</summary>
+
 <ul>
   <li>
     <a  href=""
@@ -39,7 +45,12 @@ Se você deseja contribuir com este repositório, siga estas etapas:
   </li>
 </ul>
 
-<p>SR1</p>
+</details>
+
+<details>
+
+<summary>SR1</summary>
+
 <ul>
   <li>
     <a  href=""
@@ -68,7 +79,11 @@ Se você deseja contribuir com este repositório, siga estas etapas:
   </li>
 </ul>
 
-<p>SR2</p>
+</details>
+
+<details>
+
+<summary>SR2</summary>
 <ul>
   <li>
     <a  href=""
@@ -112,26 +127,7 @@ Se você deseja contribuir com este repositório, siga estas etapas:
     >
   </li>
 </ul>
-
-## 👩‍💻 Membros de CC
-
-<ul>
-  <li>
-    <a href="https://github.com/Thomazrlima">Thomaz Lima</a> - trl@cesar.school 📩
-  </li>
-  <li>
-    <a href="https://github.com/hsspedro">Pedro Henrique Silva</a> - phss@cesar.school 📩
-  </li>
-  <li>
-    <a href="https://github.com/Sofia-Saraiva">Sofia Saraiva</a> - spscl@cesar.school 📩
-  </li>
-  <li>
-    <a href="https://github.com/Nerebo">André Goes</a> - algcf@cesar.school 📩
-  </li>
-  <li>
-    <a href="https://github.com/Tiagopbc">Tiago Cavalcanti</a> - tpbc@cesar.school 📩
-  </li>
-</ul>
+</details>
 
 ## 👨‍🎨 Membros de Design
 
@@ -153,47 +149,32 @@ Se você deseja contribuir com este repositório, siga estas etapas:
   </li>
 </ul>
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/Thomazrlima">
-        <img src="https://avatars3.githubusercontent.com/Thomazrlima" width="100px;" alt="Foto de Thomaz"/><br>
-        <sub>
-          <b>Thomaz Lima</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/hsspedro">
-        <img src="https://avatars.githubusercontent.com/hsspedro" width="100px;" alt="Foto de Pedro"/><br>
-        <sub>
-          <b>Pedro Souza</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/Nerebo">
-        <img src="https://avatars.githubusercontent.com/Nerebo" width="100px;" alt="Foto de André"/><br>
-        <sub>
-          <b>André Fonseca</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/Sofia-Saraiva">
-        <img src="https://avatars.githubusercontent.com/Sofia-Saraiva" width="100px;" alt="Foto de Sofia"/><br>
-        <sub>
-          <b>Sofia Saraiva</b>
-        </sub>
-      </a>
-    </td>
-      <td align="center">
-      <a href="https://github.com/Tiagopbc">
-        <img src="https://avatars.githubusercontent.com/Tiagopbc" width="100px;" alt="Foto de Tiago"/><br>
-        <sub>
-          <b>Tiago Cavalcanti</b>
-        </sub>
-      </a>
-    </td>
-  </tr>
-</table>
+## 👩‍💻 Membros de CC
+
+<ul>
+  <li>
+    <a href="https://github.com/Thomazrlima">Thomaz Lima</a> - trl@cesar.school 📩
+  </li>
+  <li>
+    <a href="https://github.com/hsspedro">Pedro Henrique Silva</a> - phss@cesar.school 📩
+  </li>
+  <li>
+    <a href="https://github.com/Sofia-Saraiva">Sofia Saraiva</a> - spscl@cesar.school 📩
+  </li>
+  <li>
+    <a href="https://github.com/Nerebo">André Goes</a> - algcf@cesar.school 📩
+  </li>
+  <li>
+    <a href="https://github.com/Tiagopbc">Tiago Cavalcanti</a> - tpbc@cesar.school 📩
+  </li>
+</ul>
+
+<br>
+
+<a href="https://github.com/P-E-N-T-E-S/Libreflix/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=P-E-N-T-E-S/Libreflix" />
+</a>
+
+## License
+
+[MIT](https://github.com/P-E-N-T-E-S/Libreflix/LICENSE.md)
