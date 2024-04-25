@@ -1,11 +1,11 @@
-# G7 - Libreflix
-![GitHub repo size](https://img.shields.io/github/repo-size/P-E-N-T-E-S/G7?style=flat)
-![GitHub language count](https://img.shields.io/github/languages/count/P-E-N-T-E-S/G7?style=flat&logo=python)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/P-E-N-T-E-S/G7?style=flat&logo=github)
-![Commits](https://img.shields.io/github/commit-activity/t/P-E-N-T-E-S/G7?style=flat&logo=github)
-[![GitHub](https://img.shields.io/github/license/P-E-N-T-E-S/G7)](LICENSE.md)
+# G7 - SUBlime
+![GitHub repo size](https://img.shields.io/github/repo-size/P-E-N-T-E-S/SUBlime?style=flat)
+![GitHub language count](https://img.shields.io/github/languages/count/P-E-N-T-E-S/SUBlime?style=flat&logo=python)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/P-E-N-T-E-S/SUBlime?style=flat&logo=github)
+![Commits](https://img.shields.io/github/commit-activity/t/P-E-N-T-E-S/SUBlime?style=flat&logo=github)
+[![GitHub](https://img.shields.io/github/license/P-E-N-T-E-S/SUBlime)](LICENSE.md)
 
-![libreflix-logo-24](https://github.com/P-E-N-T-E-S/G7/assets/126795323/aa838eef-ff31-4d4b-bfe4-9554475c0eba)
+![libreflix-logo-24](https://github.com/P-E-N-T-E-S/SUBlime/assets/126795323/aa838eef-ff31-4d4b-bfe4-9554475c0eba)
 
 ## 👀 Visão Geral
 
@@ -171,10 +171,10 @@ Se você deseja contribuir com este repositório, siga estas etapas:
 
 <br>
 
-<a href="https://github.com/P-E-N-T-E-S/Libreflix/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=P-E-N-T-E-S/Libreflix" />
+<a href="https://github.com/P-E-N-T-E-S/SUBlime/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=P-E-N-T-E-S/SUBlime" />
 </a>
 
 ## License
 
-[MIT](https://github.com/P-E-N-T-E-S/Libreflix/LICENSE.md)
+[MIT](https://github.com/P-E-N-T-E-S/SUBlime/LICENSE.md)
