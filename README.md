@@ -193,4 +193,4 @@ Se você deseja contribuir com este repositório, siga estas etapas:
 
 ## License
 
-[MIT](https://github.com/P-E-N-T-E-S/SUBlime/LICENSE.md)
+[MIT](https://github.com/P-E-N-T-E-S/SUBlime/LICENSE)
