@@ -1,9 +1,30 @@
-# G7 - SUBlime
-![GitHub repo size](https://img.shields.io/github/repo-size/P-E-N-T-E-S/SUBlime?style=flat)
-![GitHub language count](https://img.shields.io/github/languages/count/P-E-N-T-E-S/SUBlime?style=flat&logo=python)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/P-E-N-T-E-S/SUBlime?style=flat&logo=github)
-![Commits](https://img.shields.io/github/commit-activity/t/P-E-N-T-E-S/SUBlime?style=flat&logo=github)
-[![GitHub](https://img.shields.io/github/license/P-E-N-T-E-S/SUBlime)](LICENSE.md)
+<p align="center">
+  <img
+    src="https://img.shields.io/badge/Status-Em%20desenvolvimento-green?style=flat-square"
+    alt="Status"
+  />
+</p>
+
+<p align="center">
+  <img
+    src="https://img.shields.io/github/repo-size/P-E-N-T-E-S/Kolekto?style=flat"
+    alt="Repository Size"
+  />
+  <img
+    src="https://img.shields.io/github/languages/count/P-E-N-T-E-S/Kolekto?style=flat&logo=python"
+    alt="Language Count"
+  />
+  <img
+    src="https://img.shields.io/github/commit-activity/t/P-E-N-T-E-S/Kolekto?style=flat&logo=github"
+    alt="Commit Activity"
+  />
+  <a href="LICENSE.md"
+    ><img
+      src="https://img.shields.io/github/license/P-E-N-T-E-S/Kolekto"
+      alt="License"
+  /></a>
+</p>
+
 
 ![libreflix-logo-24](https://github.com/P-E-N-T-E-S/SUBlime/assets/126795323/aa838eef-ff31-4d4b-bfe4-9554475c0eba)
 
