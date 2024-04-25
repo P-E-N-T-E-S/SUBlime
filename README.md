@@ -60,7 +60,7 @@ Se você deseja contribuir com este repositório, siga estas etapas:
     >
   </li>
   <li>
-    <a  href=""
+    <a  href="https://miro.com/app/board/uXjVKPxfMps=/?share_link_id=204390211874"
       >Diagrama de Classes</a
     >
   </li>
@@ -74,7 +74,7 @@ Se você deseja contribuir com este repositório, siga estas etapas:
 
 <ul>
   <li>
-    <a  href=""
+    <a  href="https://www.figma.com/file/ME0MIPGPEdVN3fnxUn5nZm/SR1-G7?type=design&node-id=78%3A282&mode=design&t=jkP3DsALK9V5ZM6u-1"
       >Protótipo de Baixa</a
     >
   </li>
@@ -84,13 +84,8 @@ Se você deseja contribuir com este repositório, siga estas etapas:
     >
   </li>
   <li>
-    <a  href=""
-      >Programação em par</a
-    >
-  </li>
-  <li>
-    <a  href=""
-      >Histórias</a
+    <a  href="https://miro.com/app/board/uXjVKPxfMps=/?share_link_id=204390211874"
+      >Diagrama de Classes</a
     >
   </li>
   <li>
