@@ -26,8 +26,13 @@
   /></a>
 </p>
 
-
-![libreflix-logo-24](https://github.com/P-E-N-T-E-S/SUBlime/assets/126795323/aa838eef-ff31-4d4b-bfe4-9554475c0eba)
+<p align="center">
+  <img
+    width="800"
+    display="inline-block"
+    src="https://i.imgur.com/0USg0QG.png"
+  />
+</p>
 
 ## 👀 Visão Geral
 
