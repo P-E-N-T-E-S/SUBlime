@@ -95,7 +95,7 @@ Se você deseja contribuir com este repositório, siga estas etapas:
     >
   </li>
   <li>
-    <a  href="https://github.com/P-E-N-T-E-S/G7/issues"
+    <a  href="https://github.com/P-E-N-T-E-S/SUBlime/issues"
       >Issue/Bug Tracker</a
     >
   </li>
