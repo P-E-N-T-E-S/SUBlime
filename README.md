@@ -8,20 +8,20 @@
 
 <p align="center">
   <img
-    src="https://img.shields.io/github/repo-size/P-E-N-T-E-S/Kolekto?style=flat"
+    src="https://img.shields.io/github/repo-size/P-E-N-T-E-S/SUBlime?style=flat"
     alt="Repository Size"
   />
   <img
-    src="https://img.shields.io/github/languages/count/P-E-N-T-E-S/Kolekto?style=flat&logo=python"
+    src="https://img.shields.io/github/languages/count/P-E-N-T-E-S/SUBlime?style=flat&logo=python"
     alt="Language Count"
   />
   <img
-    src="https://img.shields.io/github/commit-activity/t/P-E-N-T-E-S/Kolekto?style=flat&logo=github"
+    src="https://img.shields.io/github/commit-activity/t/P-E-N-T-E-S/SUBlime?style=flat&logo=github"
     alt="Commit Activity"
   />
   <a href="LICENSE.md"
     ><img
-      src="https://img.shields.io/github/license/P-E-N-T-E-S/Kolekto"
+      src="https://img.shields.io/github/license/P-E-N-T-E-S/SUBlime"
       alt="License"
   /></a>
 </p>
