@@ -1,5 +1,8 @@
 package Contribuidor;
 
+import Legenda.Arquivo;
+import Legenda.Legenda;
+
 import java.util.ArrayList;
 
 public class Contribuidor {
@@ -47,5 +50,15 @@ public class Contribuidor {
         if (idiomasDominados != null) {
             idiomasDominados.remove(idioma);
         }
+    }
+
+    protected void setIdUsuario(double idUsuario) {
+    }
+
+    protected void setNome(String nome) {
+    }
+
+    protected void setEModerador(boolean eModerador) {
+
     }
 }
