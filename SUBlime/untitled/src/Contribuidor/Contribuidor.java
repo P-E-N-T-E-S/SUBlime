@@ -15,8 +15,20 @@ public class Contribuidor {
     private Legenda legenda;
     private Arquivo[] arquivos;
 
-    public String getIdUsuario() {
-        return Double.toString(idUsuario);
+    public double getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(double idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getEmail() {
@@ -39,6 +51,10 @@ public class Contribuidor {
         return eModerador;
     }
 
+    public void setEModerador(boolean eModerador) {
+        this.eModerador = eModerador;
+    }
+
     public void adicionarIdiomaDominado(String idioma) {
         if (idiomasDominados == null) {
             idiomasDominados = new ArrayList<>();
@@ -50,15 +66,5 @@ public class Contribuidor {
         if (idiomasDominados != null) {
             idiomasDominados.remove(idioma);
         }
-    }
-
-    protected void setIdUsuario(double idUsuario) {
-    }
-
-    protected void setNome(String nome) {
-    }
-
-    protected void setEModerador(boolean eModerador) {
-
     }
 }
