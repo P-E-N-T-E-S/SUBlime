@@ -6,6 +6,11 @@ public class ModeradorDAO {
     private static final String URL = "jdbc:mysql://localhost:3306/seu_banco_de_dados";
     private static final String USER = "seu_usuario";
     private static final String PASSWORD = "sua_senha";
+    private ContribuidorInterface mediator;
+
+    public ModeradorDAO(ContribuidorInterface mediator) {
+        this.mediator = mediator;
+    }
 
     public void save(Moderador moderador) {
         String sql = "INSERT INTO Moderador (idUsuario, nome, email, senha, eModerador) VALUES (?, ?, ?, ?, ?)";
@@ -37,6 +42,7 @@ public class ModeradorDAO {
 
             if (rs.next()) {
                 moderador = new Moderador(
+                        mediator,
                         rs.getDouble("idUsuario"),
                         rs.getString("nome"),
                         rs.getString("email"),

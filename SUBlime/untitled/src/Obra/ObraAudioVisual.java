@@ -16,7 +16,7 @@ public class ObraAudioVisual {
     private String caminhoLink;
 
     public ObraAudioVisual(double idObra, String titulo, String duracao, String diretor, int anoLancamento,
-                String tipo, double nota, int prioridade, Arquivo[] arquivo, String caminhoLink) {
+                           String tipo, double nota, int prioridade, Arquivo[] arquivo, String caminhoLink) {
         this.idObra = idObra;
         this.titulo = titulo;
         this.duracao = duracao;
@@ -28,8 +28,6 @@ public class ObraAudioVisual {
         this.arquivo = arquivo;
         this.caminhoLink = caminhoLink;
     }
-
-    //Adicionar como linkar
 
     public double getIdObra() {
         return idObra;

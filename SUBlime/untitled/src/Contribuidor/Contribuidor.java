@@ -2,7 +2,6 @@ package Contribuidor;
 
 import Legenda.Arquivo;
 import Legenda.Legenda;
-
 import java.util.ArrayList;
 
 public class Contribuidor {
@@ -14,6 +13,15 @@ public class Contribuidor {
     private boolean eModerador;
     private Legenda legenda;
     private Arquivo[] arquivos;
+
+    private ContribuidorInterface mediator;
+
+    public Contribuidor() {
+    }
+
+    public Contribuidor(ContribuidorInterface mediator) {
+        this.mediator = mediator;
+    }
 
     public double getIdUsuario() {
         return idUsuario;
@@ -66,5 +74,25 @@ public class Contribuidor {
         if (idiomasDominados != null) {
             idiomasDominados.remove(idioma);
         }
+    }
+
+    public Contribuidor incluir(String idUsuario) {
+        return mediator.incluir(idUsuario);
+    }
+
+    public String buscar(String idUsuario) {
+        return mediator.buscar(idUsuario);
+    }
+
+    public String excluir() {
+        return mediator.excluir(this);
+    }
+
+    public String validar() {
+        return mediator.validar(this);
+    }
+
+    public String alterar() {
+        return mediator.alterar(this);
     }
 }
