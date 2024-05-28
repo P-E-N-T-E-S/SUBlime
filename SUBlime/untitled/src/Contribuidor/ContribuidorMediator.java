@@ -2,6 +2,8 @@ package Contribuidor;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ContribuidorMediator implements ContribuidorInterface {
     private Map<String, Contribuidor> contribuidores = new HashMap<>();
@@ -36,11 +38,20 @@ public class ContribuidorMediator implements ContribuidorInterface {
 
     @Override
     public String validar(Contribuidor usuario) {
-        if (usuario.getEmail() != null && usuario.getSenha() != null) {
-            return "Usuário válido.";
-        } else {
-            return "Usuário inválido.";
+        if (usuario.getEmail() == null || usuario.getSenha() == null) {
+            return "Usuário inválido: e-mail ou senha ausente.";
         }
+
+        String email = usuario.getEmail();
+        String emailRegex = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$";
+        Pattern pattern = Pattern.compile(emailRegex);
+        Matcher matcher = pattern.matcher(email);
+
+        if (!matcher.matches()) {
+            return "Usuário inválido: e-mail inválido.";
+        }
+
+        return "Usuário válido.";
     }
 
     @Override
