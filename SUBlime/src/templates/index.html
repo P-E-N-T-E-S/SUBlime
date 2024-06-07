@@ -33,7 +33,7 @@
     </nav>
 
     <div class="header">
-        <img src="static/images/header.png" alt="">
+        <img src="static/images/header.png" alt="Vamos legendar hoje?">
         <h1>VAMOS LEGENDAR HOJE?</h1>
     </div>
 
@@ -97,5 +97,57 @@
             </div>
         </div>
     </div>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close-btn"><i class="fa-solid fa-circle-xmark" style="color: #775EDC;"></i></span>
+            <div class="popup-wrapper">
+                <div class="popup-wrapper-item" id="movie-right">
+                    <p id="legendar">LEGENDAR</p>
+                    <img src="static/images/howls.jpg" alt="tal filme">
+                    <p id="avaliacao">Filme ainda não publicado - Não possue avaliações</p>
+                </div>
+                <div class="popup-wrapper-item">
+                    <h3>HOWLS</h3>
+                    <p id="duracao">2018 - 130min</p>
+                    <div class="idioma-wrapper">
+                        <p><b>IDIOMA ORIGINAL:</b> Japonês</p>
+                        <select id="subtitle-language">
+                            <option value="" disabled selected><b>IDIOMA DA LEGENDA</b></option>
+                            <option value="ingles">Inglês</option>
+                            <option value="pt-br">Português - BR</option>
+                            <option value="pt-pt">Português - PT</option>
+                        </select>
+                    </div>
+                    <button>LEGENDAR</button>
+                    <p id="link-libreflix">Ver no LibreFlix</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var popup = document.getElementById("popup");
+            var span = document.querySelector(".close-btn");
+            var movies = document.querySelectorAll(".movie");
+
+            movies.forEach(function(movie) {
+                movie.onclick = function() {
+                    popup.style.display = "flex";
+                }
+            });
+
+            span.onclick = function() {
+                popup.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == popup) {
+                    popup.style.display = "none";
+                }
+            }
+        });
+    </script>
 </body>
 </html>
