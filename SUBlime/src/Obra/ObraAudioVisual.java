@@ -3,7 +3,6 @@ package Obra;
 import Legenda.Arquivo;
 
 public class ObraAudioVisual {
-
     private double idObra;
     private String titulo;
     private String duracao;
@@ -103,5 +102,20 @@ public class ObraAudioVisual {
 
     public void setCaminhoLink(String caminhoLink) {
         this.caminhoLink = caminhoLink;
+    }
+
+    @Override
+    public String toString() {
+        return "ObraAudioVisual{" +
+                "idObra=" + idObra +
+                ", titulo='" + titulo + '\'' +
+                ", duracao='" + duracao + '\'' +
+                ", diretor='" + diretor + '\'' +
+                ", anoLancamento=" + anoLancamento +
+                ", tipo='" + tipo + '\'' +
+                ", nota=" + nota +
+                ", prioridade=" + prioridade +
+                ", caminhoLink='" + caminhoLink + '\'' +
+                '}';
     }
 }
