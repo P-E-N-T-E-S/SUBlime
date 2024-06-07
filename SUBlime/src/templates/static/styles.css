@@ -59,7 +59,7 @@ body {
     text-align: center;
     text-decoration: none;
     display: block;
-    font-weight: 500;
+    font-weight: 400;
     background-color: #1C1B41;
 }
 
@@ -160,6 +160,7 @@ body {
     margin-bottom: 0.8rem;
     align-self: flex-end;
     color: #B459B3;
+    font-family: 'Josefin Sans';
 }
 
 .catalogue {
@@ -196,7 +197,125 @@ body {
     object-fit: contain;
 }
 
+.movie img:hover {
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.432), 0 12px 32px 0 rgb(255, 255, 255, 0.432);
+    transition: 0.3s;
+}
+
 .movie p {
     font-family: 'Josefin Sans';
     margin-top: 0.2rem;
+}
+
+.open-popup-btn {
+    background-color: #7CE0CE;
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin: 2rem;
+}
+
+.popup {
+    display: none; 
+    position: fixed; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.popup-content {
+    background-color: #111221;
+    padding-inline: 4rem;
+    padding-block: 5rem;
+    width: 80%; 
+    border-radius: 1rem;
+    border-color: #1C1B41;
+    position: sticky;
+    color: #EBF5F3;
+    max-width: 60rem;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 1.75rem;
+    font-weight: bold;
+    position: absolute;
+    top: 0.5rem;
+    right: 1.25rem;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #7CE0CE;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.popup-wrapper-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+#movie-right {
+    width: 55%;
+}
+#legendar {
+    opacity: 95%;
+    color: #1C1B41;
+    font-size: 5rem;
+    font-weight: 700;
+
+}
+
+.popup-wrapper-item img {
+    padding: 0;
+    margin: 0;
+    border-radius: 3%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.popup-wrapper-item h3 {
+    font-size: 3rem;
+    align-self: flex-start;
+    font-family: 'Evolventa';
+    font-weight: 200;
+}
+
+#avaliacao {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #775EDC;
+    margin: 5%;
+}
+
+#duracao {
+    font-weight: 200;
+    align-self: flex-start;
+}
+
+#link-libreflix {
+    text-decoration: underline;
+    font-weight: 200;
+    color: #DEDEDE;
 }

@@ -33,7 +33,7 @@
     </nav>
 
     <div class="header">
-        <img src="static/images/header.png" alt="">
+        <img src="static/images/header.png" alt="Vamos legendar hoje?">
         <h1>VAMOS LEGENDAR HOJE?</h1>
     </div>
 
@@ -97,5 +97,58 @@
             </div>
         </div>
     </div>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <div class="popup-wrapper">
+                <div class="popup-wrapper-item" id="movie-right">
+                    <p id="legendar">LEGENDAR</p>
+                    <img src="static/images/howls.jpg" alt="tal filme">
+                    <p id="avaliacao">Filme ainda não publicado - Não possue avaliações</p>
+                </div>
+                <div class="popup-wrapper-item">
+                    <h3>HOWLS MOVING</h3>
+                    <p id="duracao">2018 - 130min</p>
+                    <div class="idioma-wrapper">
+                        <p>IDIOMA ORIGINAL: Japonês</p>
+                        <p>DROPDOWN IDIOMA</p>
+                    </div>
+                    <p>BOTAO LEGENDAR</p>
+                    <p id="link-libreflix">Ver no LibreFlix</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the popup
+        var popup = document.getElementById("popup");
+
+        // Get the <span> element that closes the popup
+        var span = document.querySelector(".close-btn");
+
+        // Get all movie elements
+        var movies = document.querySelectorAll(".movie");
+
+        // Add click event to each movie element
+        movies.forEach(function(movie) {
+            movie.onclick = function() {
+                popup.style.display = "block";
+            }
+        });
+
+        // When the user clicks on <span> (x), close the popup
+        span.onclick = function() {
+            popup.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the popup, close it
+        window.onclick = function(event) {
+            if (event.target == popup) {
+                popup.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
