@@ -100,7 +100,7 @@
 
     <div class="popup" id="popup">
         <div class="popup-content">
-            <span class="close-btn">&times;</span>
+            <span class="close-btn"><i class="fa-solid fa-circle-xmark" style="color: #775EDC;"></i></span>
             <div class="popup-wrapper">
                 <div class="popup-wrapper-item" id="movie-right">
                     <p id="legendar">LEGENDAR</p>
@@ -108,13 +108,18 @@
                     <p id="avaliacao">Filme ainda não publicado - Não possue avaliações</p>
                 </div>
                 <div class="popup-wrapper-item">
-                    <h3>HOWLS MOVING</h3>
+                    <h3>HOWLS</h3>
                     <p id="duracao">2018 - 130min</p>
                     <div class="idioma-wrapper">
-                        <p>IDIOMA ORIGINAL: Japonês</p>
-                        <p>DROPDOWN IDIOMA</p>
+                        <p><b>IDIOMA ORIGINAL:</b> Japonês</p>
+                        <select id="subtitle-language">
+                            <option value="" disabled selected><b>IDIOMA DA LEGENDA</b></option>
+                            <option value="ingles">Inglês</option>
+                            <option value="pt-br">Português - BR</option>
+                            <option value="pt-pt">Português - PT</option>
+                        </select>
                     </div>
-                    <p>BOTAO LEGENDAR</p>
+                    <button>LEGENDAR</button>
                     <p id="link-libreflix">Ver no LibreFlix</p>
                 </div>
             </div>
@@ -122,33 +127,27 @@
     </div>
 
     <script>
-        // Get the popup
-        var popup = document.getElementById("popup");
+        document.addEventListener('DOMContentLoaded', function() {
+            var popup = document.getElementById("popup");
+            var span = document.querySelector(".close-btn");
+            var movies = document.querySelectorAll(".movie");
 
-        // Get the <span> element that closes the popup
-        var span = document.querySelector(".close-btn");
+            movies.forEach(function(movie) {
+                movie.onclick = function() {
+                    popup.style.display = "flex";
+                }
+            });
 
-        // Get all movie elements
-        var movies = document.querySelectorAll(".movie");
-
-        // Add click event to each movie element
-        movies.forEach(function(movie) {
-            movie.onclick = function() {
-                popup.style.display = "block";
-            }
-        });
-
-        // When the user clicks on <span> (x), close the popup
-        span.onclick = function() {
-            popup.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the popup, close it
-        window.onclick = function(event) {
-            if (event.target == popup) {
+            span.onclick = function() {
                 popup.style.display = "none";
             }
-        }
+
+            window.onclick = function(event) {
+                if (event.target == popup) {
+                    popup.style.display = "none";
+                }
+            }
+        });
     </script>
 </body>
 </html>
