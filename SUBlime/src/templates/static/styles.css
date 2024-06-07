@@ -3,35 +3,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-    font-family: 'Evolventa';
+    font-family: 'Josefin Sans';
     color: #EBF5F3;
-    background-color: #1C1B41;
+    background-color: #111221; 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #1C1B41; 
+    background-color: #111221; 
 }
 
 .navbar {
     display: flex;
+    background-color: #1C1B41;
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
     overflow: hidden;
-    font-family: 'Poppins';
 }
 
 .navbar-left, .navbar-right {
     display: flex;
+    background-color: #1C1B41;
     align-items: center;
 }
 
+.navbar-logo {
+    background-color: #1C1B41;
+}
 .navbar-logo img {
     height: 1.4rem;
     margin: 1rem;
+    background-color: #1C1B41;
     margin-top: 1.2rem;
 }
 
@@ -41,10 +46,11 @@ body {
     padding: 0;
     display: flex;
     align-items: center;
+    background-color: #1C1B41;
 }
 
 .navbar-item {
-    background: none;
+    background-color: #1C1B41;
 }
 
 .navbar-item a {
@@ -53,11 +59,13 @@ body {
     text-align: center;
     text-decoration: none;
     display: block;
-    font-weight: 200;
+    font-weight: 500;
+    background-color: #1C1B41;
 }
 
 .navbar-item a:hover {
     color: #7CE0CE;
+    background-color: #1C1B41;
 }
 
 .navbar-item i:hover {
@@ -75,13 +83,15 @@ body {
 .dot-divisor {
     width: 0.4rem;
     height: 0.4rem;
-    background-color: #A1A1A1;
+    background-color: white;
+    opacity: 80%;
     border-radius: 50%;
 }
 
 #perfil a {
     color: #775EDC; 
     margin-left: 0;
+    background-color: #1C1B41;
 }
 
 #perfil a:hover {
@@ -101,8 +111,13 @@ body {
     padding: 0.5rem 1rem;
     outline: none;
     border-radius: 4rem 0 0 4rem;
-    background-color: #1C1B41;
     color: #7CE0CE;
+    background-color: #1C1B41;
+}
+
+.search-bar::placeholder {
+    color: #7CE0CE; 
+    opacity: 40%;
 }
 
 .search-bar:focus {
@@ -115,8 +130,73 @@ body {
     padding: 0.5rem 1rem;
     cursor: pointer;
     border-radius: 0 4rem 4rem 0;
+    background-color: #1C1B41;
 }
 
 .search-btn i {
     color: #7CE0CE;
+}
+
+.header {
+    background-color: #111221;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    overflow: hidden;
+    padding-right: 1rem;
+}
+
+.header img {
+    background-color: #111221;
+    height: 110%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.header h1 {
+    background-color: #111221;
+    font-size: 3.5rem;
+    margin-bottom: 0.8rem;
+    align-self: flex-end;
+    color: #B459B3;
+}
+
+.catalogue {
+    padding: 1.5rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.categoria h3{
+    font-family: 'Evolventa';
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #7CE0CE;
+}
+
+.movie-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 0.4rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.movie {
+    max-height: 16rem;
+    padding-inline: 0;
+}
+
+.movie img {
+    border-radius: 5%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.movie p {
+    font-family: 'Josefin Sans';
+    margin-top: 0.2rem;
 }
