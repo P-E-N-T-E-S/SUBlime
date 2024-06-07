@@ -1,5 +1,6 @@
 package Legenda;
 
+import utils.StringUtils;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,9 +12,14 @@ public class LegendaMediator {
         this.legendaDAO = legendaDAO;
     }
 
-    public void save(Legenda legenda) {
+    public String save(Legenda legenda) {
+        if (StringUtils.isVazioOuNulo(legenda.getTexto())) {
+            return "O texto da legenda está vazio!";
+        }
+
         legendaDAO.save(legenda);
         legendasCache.put(legenda.getId(), legenda);
+        return "Legenda salva com sucesso!";
     }
 
     public Legenda findById(long id) {

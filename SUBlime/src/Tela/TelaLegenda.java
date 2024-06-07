@@ -1,15 +1,21 @@
 package Tela;
 
+import Legenda.Legenda;
+import Legenda.LegendaDAO;
+import Legenda.LegendaMediator;
+
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class TelaLegenda {
     private JFrame frame;
     private JTextArea textAreaLegenda;
+    private LegendaMediator legendaMediator;
 
     public TelaLegenda() {
+        LegendaDAO legendaDAO = new LegendaDAO();
+        legendaMediator = new LegendaMediator(legendaDAO);
         initialize();
     }
 
@@ -42,16 +48,15 @@ public class TelaLegenda {
 
     private void salvarLegenda() {
         String legendaTexto = textAreaLegenda.getText();
+        Legenda legenda = new Legenda(0, legendaTexto, "Português", 0, 0);
 
-        if (legendaTexto != null && !legendaTexto.isEmpty()) {
+        String mensagem = legendaMediator.save(legenda);
+        JOptionPane.showMessageDialog(frame, mensagem);
 
-            JOptionPane.showMessageDialog(frame, "Legenda salva com sucesso!");
+        if (mensagem.equals("Legenda salva com sucesso!")) {
             limparCampos();
-        } else {
-            JOptionPane.showMessageDialog(frame, "O texto da legenda está vazio!");
         }
     }
-
 
     private void limparCampos() {
         textAreaLegenda.setText("");
