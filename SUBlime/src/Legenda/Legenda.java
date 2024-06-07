@@ -11,7 +11,8 @@ public class Legenda {
     private int prioridade;
     private double nota;
 
-    public Legenda(String texto, String idioma, int prioridade, double nota) {
+    public Legenda(long id, String texto, String idioma, int prioridade, double nota) {
+        this.id = id;
         this.texto = texto;
         this.idioma = idioma;
         this.prioridade = prioridade;
