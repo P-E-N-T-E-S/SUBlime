@@ -1,6 +1,6 @@
 package Tela;
 
-import Obra.ObraAudioVisual;
+import Obra.Filme;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class TelaCatalogo {
-    private List<ObraAudioVisual> obras;
+    private List<Filme> obras;
     private JFrame frame;
     private DefaultListModel<String> listModel;
     private JList<String> listObras;
@@ -62,15 +62,15 @@ public class TelaCatalogo {
     }
 
     private void adicionarObraDemo() {
-        ObraAudioVisual obra1 = new ObraAudioVisual(1, "Howl's Moving Castle", "130min", "Hayao Miyazaki", 2004, "Filme", 8.2, 1, null, "/link/to/howls");
-        ObraAudioVisual obra2 = new ObraAudioVisual(2, "Spirited Away", "125min", "Hayao Miyazaki", 2001, "Filme", 8.6, 1, null, "/link/to/spirited");
+        Filme obra1 = new Filme(1, "Howl's Moving Castle", "130min", "Hayao Miyazaki", 2004, "Filme", 8.2, 1, null, "/link/to/howls");
+        Filme obra2 = new Filme(2, "Spirited Away", "125min", "Hayao Miyazaki", 2001, "Filme", 8.6, 1, null, "/link/to/spirited");
 
         adicionarObra(obra1);
         adicionarObra(obra2);
         listarObras();
     }
 
-    public void adicionarObra(ObraAudioVisual obra) {
+    public void adicionarObra(Filme obra) {
         this.obras.add(obra);
         listarObras();
     }
@@ -82,13 +82,13 @@ public class TelaCatalogo {
 
     public void listarObras() {
         listModel.clear();
-        for (ObraAudioVisual obra : obras) {
+        for (Filme obra : obras) {
             listModel.addElement(obra.getTitulo());
         }
     }
 
-    public ObraAudioVisual buscarObraPorId(double idObra) {
-        for (ObraAudioVisual obra : obras) {
+    public Filme buscarObraPorId(double idObra) {
+        for (Filme obra : obras) {
             if (obra.getIdObra() == idObra) {
                 return obra;
             }
@@ -98,12 +98,12 @@ public class TelaCatalogo {
 
     public void buscarObrasPorTitulo() {
         String titulo = searchField.getText();
-        List<ObraAudioVisual> obrasFiltradas = this.obras.stream()
+        List<Filme> obrasFiltradas = this.obras.stream()
                 .filter(obra -> obra.getTitulo().equalsIgnoreCase(titulo))
                 .collect(Collectors.toList());
 
         listModel.clear();
-        for (ObraAudioVisual obra : obrasFiltradas) {
+        for (Filme obra : obrasFiltradas) {
             listModel.addElement(obra.getTitulo());
         }
     }

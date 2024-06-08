@@ -5,31 +5,31 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ModeradorMediator implements ContribuidorInterface {
-    private final Map<String, Moderador> moderadores = new HashMap<>();
+public class RevisorMediator implements ContribuidorInterface {
+    private final Map<String, Revisor> moderadores = new HashMap<>();
 
     @Override
-    public Moderador incluir(String idUsuario) {
+    public Revisor incluir(String idUsuario) {
         if (moderadores.containsKey(idUsuario)) {
             return moderadores.get(idUsuario);
         } else {
-            Moderador novoModerador = new Moderador(this, Double.parseDouble(idUsuario), "", "", "", true);
-            moderadores.put(idUsuario, novoModerador);
-            return novoModerador;
+            Revisor novoRevisor = new Revisor(this, Double.parseDouble(idUsuario), "", "", "", true);
+            moderadores.put(idUsuario, novoRevisor);
+            return novoRevisor;
         }
     }
 
     @Override
     public String buscar(String idUsuario) {
-        Moderador moderador = moderadores.get(idUsuario);
-        return moderador != null ? moderador.toString() : "Moderador não encontrado.";
+        Revisor revisor = moderadores.get(idUsuario);
+        return revisor != null ? revisor.toString() : "Moderador não encontrado.";
     }
 
     @Override
     public String excluir(Contribuidor usuario) {
-        if (usuario instanceof Moderador moderador) {
-            if (moderadores.containsKey(String.valueOf(moderador.getIdUsuario()))) {
-                moderadores.remove(String.valueOf(moderador.getIdUsuario()));
+        if (usuario instanceof Revisor revisor) {
+            if (moderadores.containsKey(String.valueOf(revisor.getIdUsuario()))) {
+                moderadores.remove(String.valueOf(revisor.getIdUsuario()));
                 return "Moderador excluído com sucesso.";
             } else {
                 return "Moderador não encontrado.";
@@ -41,12 +41,12 @@ public class ModeradorMediator implements ContribuidorInterface {
 
     @Override
     public String validar(Contribuidor usuario) {
-        if (usuario instanceof Moderador moderador) {
-            if (moderador.getEmail() == null || moderador.getSenha() == null) {
+        if (usuario instanceof Revisor revisor) {
+            if (revisor.getEmail() == null || revisor.getSenha() == null) {
                 return "Moderador inválido: e-mail ou senha ausente.";
             }
 
-            String email = moderador.getEmail();
+            String email = revisor.getEmail();
             String emailRegex = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$";
             Pattern pattern = Pattern.compile(emailRegex);
             Matcher matcher = pattern.matcher(email);
@@ -63,10 +63,10 @@ public class ModeradorMediator implements ContribuidorInterface {
 
     @Override
     public String alterar(Contribuidor usuario) {
-        if (usuario instanceof Moderador moderador) {
-            String idUsuario = String.valueOf(moderador.getIdUsuario());
+        if (usuario instanceof Revisor revisor) {
+            String idUsuario = String.valueOf(revisor.getIdUsuario());
             if (moderadores.containsKey(idUsuario)) {
-                moderadores.put(idUsuario, moderador);
+                moderadores.put(idUsuario, revisor);
                 return "Moderador alterado com sucesso.";
             } else {
                 return "Moderador não encontrado.";

@@ -18,7 +18,7 @@ public class Arquivo {
     private boolean estado;
     private File armazenaLegenda;
     private static ArrayList<Arquivo> arquivos = new ArrayList<>();
-    private ArquivoMediator mediator;
+    private ArquivoInterface mediator;
 
     public Arquivo(String caminhoArquivo, String nomeArquivo, long idArquivo, File armazenaLegenda) {
         this.caminhoArquivo = caminhoArquivo;

@@ -1,61 +1,121 @@
 package Obra;
 
 import Legenda.Arquivo;
-import java.util.HashMap;
-import java.util.Map;
 
-public class ObraMediator implements ObraMediatorInterface {
-    private Map<Double, ObraAudioVisual> obras = new HashMap<>();
+public class Filme {
+    private double idObra;
+    private String titulo;
+    private String duracao;
+    private String diretor;
+    private int anoLancamento;
+    private String tipo;
+    private double nota;
+    private int prioridade;
+    private Arquivo[] arquivo;
+    private String caminhoLink;
 
-    @Override
-    public ObraAudioVisual incluir(double idObra, String titulo, String duracao, String diretor, int anoLancamento,
-                                   String tipo, double nota, int prioridade, Arquivo[] arquivo, String caminhoLink) {
-        if (obras.containsKey(idObra)) {
-            return obras.get(idObra);
-        } else {
-            ObraAudioVisual novaObra = new ObraAudioVisual(idObra, titulo, duracao, diretor, anoLancamento,
-                    tipo, nota, prioridade, null, caminhoLink);
-            obras.put(idObra, novaObra);
-            return novaObra;
-        }
+    public Filme(double idObra, String titulo, String duracao, String diretor, int anoLancamento,
+                 String tipo, double nota, int prioridade, Arquivo[] arquivo, String caminhoLink) {
+        this.idObra = idObra;
+        this.titulo = titulo;
+        this.duracao = duracao;
+        this.diretor = diretor;
+        this.anoLancamento = anoLancamento;
+        this.tipo = tipo;
+        this.nota = nota;
+        this.prioridade = prioridade;
+        this.arquivo = arquivo;
+        this.caminhoLink = caminhoLink;
+    }
+
+    public double getIdObra() {
+        return idObra;
+    }
+
+    public String getCaminhoLink() {
+        return caminhoLink;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getDuracao() {
+        return duracao;
+    }
+
+    public void setDuracao(String duracao) {
+        this.duracao = duracao;
+    }
+
+    public String getDiretor() {
+        return diretor;
+    }
+
+    public void setDiretor(String diretor) {
+        this.diretor = diretor;
+    }
+
+    public int getAnoLancamento() {
+        return anoLancamento;
+    }
+
+    public void setAnoLancamento(int anoLancamento) {
+        this.anoLancamento = anoLancamento;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public double getNota() {
+        return nota;
+    }
+
+    public void setNota(double nota) {
+        this.nota = nota;
+    }
+
+    public int getPrioridade() {
+        return prioridade;
+    }
+
+    public void setPrioridade(int prioridade) {
+        this.prioridade = prioridade;
+    }
+
+    public Arquivo[] getArquivo() {
+        return arquivo;
+    }
+
+    public void setArquivo(Arquivo[] arquivo) {
+        this.arquivo = arquivo;
+    }
+
+    public void setCaminhoLink(String caminhoLink) {
+        this.caminhoLink = caminhoLink;
     }
 
     @Override
-    public String buscar(double idObra) {
-        ObraAudioVisual obra = obras.get(idObra);
-        return obra != null ? obra.toString() : "Obra não encontrada.";
-    }
-
-    @Override
-    public String excluir(ObraAudioVisual obra) {
-        if (obras.containsValue(obra)) {
-            obras.remove(obra.getIdObra());
-            return "Obra excluída com sucesso.";
-        } else {
-            return "Obra não encontrada.";
-        }
-    }
-
-    @Override
-    public String validar(ObraAudioVisual obra) {
-        if (obra.getTitulo() != null && obra.getDiretor() != null && obra.getTipo() != null &&
-                obra.getDuracao() != null && obra.getCaminhoLink() != null && obra.getArquivo() != null &&
-                obra.getIdObra() > 0 && obra.getAnoLancamento() > 0 && obra.getNota() >= 0 &&
-                obra.getPrioridade() >= 0) {
-            return "Obra válida.";
-        } else {
-            return "Obra inválida.";
-        }
-    }
-
-    @Override
-    public String alterar(ObraAudioVisual obra) {
-        double idObra = obra.getIdObra();
-        if (obras.containsKey(idObra)) {
-            obras.put(idObra, obra);
-            return "Obra alterada com sucesso.";
-        } else {
-            return "Obra não encontrada.";
-        }
+    public String toString() {
+        return "ObraAudioVisual{" +
+                "idObra=" + idObra +
+                ", titulo='" + titulo + '\'' +
+                ", duracao='" + duracao + '\'' +
+                ", diretor='" + diretor + '\'' +
+                ", anoLancamento=" + anoLancamento +
+                ", tipo='" + tipo + '\'' +
+                ", nota=" + nota +
+                ", prioridade=" + prioridade +
+                ", caminhoLink='" + caminhoLink + '\'' +
+                '}';
     }
 }

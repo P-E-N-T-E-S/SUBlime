@@ -4,16 +4,16 @@ import Legenda.Arquivo;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ObraMediator implements ObraMediatorInterface {
-    private Map<Double, ObraAudioVisual> obras = new HashMap<>();
+public class FilmeMediator implements FilmeInterface {
+    private Map<Double, Filme> obras = new HashMap<>();
 
     @Override
-    public ObraAudioVisual incluir(double idObra, String titulo, String duracao, String diretor, int anoLancamento,
-                                   String tipo, double nota, int prioridade, Arquivo[] arquivo, String caminhoLink) {
+    public Filme incluir(double idObra, String titulo, String duracao, String diretor, int anoLancamento,
+                         String tipo, double nota, int prioridade, Arquivo[] arquivo, String caminhoLink) {
         if (obras.containsKey(idObra)) {
             return obras.get(idObra);
         } else {
-            ObraAudioVisual novaObra = new ObraAudioVisual(idObra, titulo, duracao, diretor, anoLancamento,
+            Filme novaObra = new Filme(idObra, titulo, duracao, diretor, anoLancamento,
                     tipo, nota, prioridade, null, caminhoLink);
             obras.put(idObra, novaObra);
             return novaObra;
@@ -22,12 +22,12 @@ public class ObraMediator implements ObraMediatorInterface {
 
     @Override
     public String buscar(double idObra) {
-        ObraAudioVisual obra = obras.get(idObra);
+        Filme obra = obras.get(idObra);
         return obra != null ? obra.toString() : "Obra não encontrada.";
     }
 
     @Override
-    public String excluir(ObraAudioVisual obra) {
+    public String excluir(Filme obra) {
         if (obras.containsValue(obra)) {
             obras.remove(obra.getIdObra());
             return "Obra excluída com sucesso.";
@@ -37,7 +37,7 @@ public class ObraMediator implements ObraMediatorInterface {
     }
 
     @Override
-    public String validar(ObraAudioVisual obra) {
+    public String validar(Filme obra) {
         if (obra.getTitulo() != null && obra.getDiretor() != null && obra.getTipo() != null &&
                 obra.getDuracao() != null && obra.getCaminhoLink() != null && obra.getArquivo() != null &&
                 obra.getIdObra() > 0 && obra.getAnoLancamento() > 0 && obra.getNota() >= 0 &&
@@ -49,7 +49,7 @@ public class ObraMediator implements ObraMediatorInterface {
     }
 
     @Override
-    public String alterar(ObraAudioVisual obra) {
+    public String alterar(Filme obra) {
         double idObra = obra.getIdObra();
         if (obras.containsKey(idObra)) {
             obras.put(idObra, obra);

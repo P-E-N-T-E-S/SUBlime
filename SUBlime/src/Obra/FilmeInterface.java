@@ -2,15 +2,15 @@ package Obra;
 
 import Legenda.Arquivo;
 
-public interface ObraMediatorInterface {
-    ObraAudioVisual incluir(double idObra, String titulo, String duracao, String diretor, int anoLancamento,
-                            String tipo, double nota, int prioridade, Arquivo[] arquivo, String caminhoLink);
+public interface FilmeInterface {
+    Filme incluir(double idObra, String titulo, String duracao, String diretor, int anoLancamento,
+                  String tipo, double nota, int prioridade, Arquivo[] arquivo, String caminhoLink);
 
     String buscar(double idObra);
 
-    String excluir(ObraAudioVisual obra);
+    String excluir(Filme obra);
 
-    String validar(ObraAudioVisual obra);
+    String validar(Filme obra);
 
-    String alterar(ObraAudioVisual obra);
+    String alterar(Filme obra);
 }

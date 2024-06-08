@@ -2,27 +2,27 @@ package Contribuidor;
 
 import java.sql.*;
 
-public class ModeradorDAO {
+public class RevisorDAO {
     private static final String URL = "jdbc:mysql://localhost:3306/seu_banco_de_dados";
     private static final String USER = "seu_usuario";
     private static final String PASSWORD = "sua_senha";
     private ContribuidorInterface mediator;
 
-    public ModeradorDAO(ContribuidorInterface mediator) {
+    public RevisorDAO(ContribuidorInterface mediator) {
         this.mediator = mediator;
     }
 
-    public void save(Moderador moderador) {
+    public void save(Revisor revisor) {
         String sql = "INSERT INTO Moderador (idUsuario, nome, email, senha, eModerador) VALUES (?, ?, ?, ?, ?)";
 
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-            stmt.setDouble(1, moderador.getIdUsuario());
-            stmt.setString(2, moderador.getNome());
-            stmt.setString(3, moderador.getEmail());
-            stmt.setString(4, moderador.getSenha());
-            stmt.setBoolean(5, moderador.getEModerador());
+            stmt.setDouble(1, revisor.getIdUsuario());
+            stmt.setString(2, revisor.getNome());
+            stmt.setString(3, revisor.getEmail());
+            stmt.setString(4, revisor.getSenha());
+            stmt.setBoolean(5, revisor.getEModerador());
 
             stmt.executeUpdate();
         } catch (SQLException e) {
@@ -30,9 +30,9 @@ public class ModeradorDAO {
         }
     }
 
-    public Moderador findById(double idUsuario) {
+    public Revisor findById(double idUsuario) {
         String sql = "SELECT * FROM Moderador WHERE idUsuario = ?";
-        Moderador moderador = null;
+        Revisor revisor = null;
 
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -41,7 +41,7 @@ public class ModeradorDAO {
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
-                moderador = new Moderador(
+                revisor = new Revisor(
                         mediator,
                         rs.getDouble("idUsuario"),
                         rs.getString("nome"),
@@ -54,20 +54,20 @@ public class ModeradorDAO {
             e.printStackTrace();
         }
 
-        return moderador;
+        return revisor;
     }
 
-    public void update(Moderador moderador) {
+    public void update(Revisor revisor) {
         String sql = "UPDATE Moderador SET nome = ?, email = ?, senha = ?, eModerador = ? WHERE idUsuario = ?";
 
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-            stmt.setString(1, moderador.getNome());
-            stmt.setString(2, moderador.getEmail());
-            stmt.setString(3, moderador.getSenha());
-            stmt.setBoolean(4, moderador.getEModerador());
-            stmt.setDouble(5, moderador.getIdUsuario());
+            stmt.setString(1, revisor.getNome());
+            stmt.setString(2, revisor.getEmail());
+            stmt.setString(3, revisor.getSenha());
+            stmt.setBoolean(4, revisor.getEModerador());
+            stmt.setDouble(5, revisor.getIdUsuario());
 
             stmt.executeUpdate();
         } catch (SQLException e) {

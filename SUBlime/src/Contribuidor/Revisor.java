@@ -1,10 +1,10 @@
 package Contribuidor;
 
-public class Moderador extends Contribuidor {
+public class Revisor extends Contribuidor {
     private Contribuidor contribuidor;
     private ContribuidorInterface mediator;
 
-    public Moderador(ContribuidorInterface mediator, double idUsuario, String nome, String email, String senha, boolean eModerador) {
+    public Revisor(ContribuidorInterface mediator, double idUsuario, String nome, String email, String senha, boolean eModerador) {
         super(mediator);
         this.mediator = mediator;
         this.setIdUsuario(idUsuario);
@@ -22,8 +22,8 @@ public class Moderador extends Contribuidor {
         this.contribuidor = contribuidor;
     }
 
-    public Moderador incluir(String idUsuario) {
-        return (Moderador) mediator.incluir(idUsuario);
+    public Revisor incluir(String idUsuario) {
+        return (Revisor) mediator.incluir(idUsuario);
     }
 
     public String buscar(String idUsuario) {

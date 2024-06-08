@@ -1,18 +1,17 @@
 package Obra;
 
-import Legenda.Arquivo;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class ObraAudioVisualDAO {
+public class FilmeDAO {
     private static final String URL = "jdbc:mysql://localhost:3306/seu_banco_de_dados";
     private static final String USER = "seu_usuario";
     private static final String PASSWORD = "sua_senha";
 
-    public void save(ObraAudioVisual obra) {
+    public void save(Filme obra) {
         String sql = "INSERT INTO ObraAudioVisual (idObra, titulo, duracao, diretor, anoLancamento, tipo, nota, prioridade, caminhoLink) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
@@ -34,9 +33,9 @@ public class ObraAudioVisualDAO {
         }
     }
 
-    public ObraAudioVisual findById(double idObra) {
+    public Filme findById(double idObra) {
         String sql = "SELECT * FROM ObraAudioVisual WHERE idObra = ?";
-        ObraAudioVisual obra = null;
+        Filme obra = null;
 
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -45,7 +44,7 @@ public class ObraAudioVisualDAO {
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
-                obra = new ObraAudioVisual(
+                obra = new Filme(
                         rs.getDouble("idObra"),
                         rs.getString("titulo"),
                         rs.getString("duracao"),
@@ -65,7 +64,7 @@ public class ObraAudioVisualDAO {
         return obra;
     }
 
-    public void update(ObraAudioVisual obra) {
+    public void update(Filme obra) {
         String sql = "UPDATE ObraAudioVisual SET titulo = ?, duracao = ?, diretor = ?, anoLancamento = ?, tipo = ?, nota = ?, prioridade = ?, caminhoLink = ? WHERE idObra = ?";
 
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
