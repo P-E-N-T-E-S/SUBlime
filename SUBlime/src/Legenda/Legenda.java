@@ -1,6 +1,11 @@
 package Legenda;
 
 import Contribuidor.Contribuidor;
+import utils.StringUtils;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Legenda {
     private long id;
@@ -73,5 +78,33 @@ public class Legenda {
 
     public void setNota(double nota) {
         this.nota = nota;
+    }
+
+    public void salvarLegenda(String caminhoArquivo, String nomeArquivo) throws IOException {
+        if (!StringUtils.isVazioOuNulo(caminhoArquivo) && !StringUtils.isVazioOuNulo(nomeArquivo) && !StringUtils.isVazioOuNulo(texto)) {
+            File diretorio = new File(caminhoArquivo);
+            if (!diretorio.exists()) {
+                diretorio.mkdirs(); // Cria o diretório se não existir
+            }
+
+            File arquivo = new File(diretorio, nomeArquivo);
+            if (!arquivo.exists()) {
+                if (arquivo.createNewFile()) {
+                    System.out.println("Arquivo criado com sucesso! " + arquivo.getName());
+                } else {
+                    System.out.println("Não foi possível criar o arquivo.");
+                }
+            } else {
+                System.out.println("Arquivo já existe e será sobrescrito.");
+            }
+
+            try (FileWriter escreveArquivo = new FileWriter(arquivo, false)) {
+                escreveArquivo.write(this.texto);
+            } catch (IOException e) {
+                throw new IOException("Erro ao escrever no arquivo: " + e.getMessage());
+            }
+        } else {
+            throw new IllegalArgumentException("Caminho, nome do arquivo ou texto da legenda estão vazios ou nulos.");
+        }
     }
 }

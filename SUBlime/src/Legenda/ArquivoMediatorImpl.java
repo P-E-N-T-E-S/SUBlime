@@ -19,6 +19,6 @@ public class ArquivoMediatorImpl implements ArquivoMediator {
 
     @Override
     public boolean alterarArquivo(Arquivo arquivo) {
-        return arquivo.alterar(arquivo);
+        return Arquivo.alterar(arquivo);
     }
 }

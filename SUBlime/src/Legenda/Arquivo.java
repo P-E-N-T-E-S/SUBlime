@@ -1,6 +1,7 @@
 package Legenda;
 
 import Contribuidor.Contribuidor;
+import utils.StringUtils;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -86,23 +87,42 @@ public class Arquivo {
         this.armazenaLegenda = armazenaLegenda;
     }
 
-    public void criaArquivo(String nomeArquivo) throws IOException {
-        armazenaLegenda = new File(nomeArquivo);
-        if (armazenaLegenda.createNewFile()) {
-            System.out.println("Arquivo criado com sucesso! " + armazenaLegenda.getName());
+    public void criaArquivo(String caminhoArquivo, String nomeArquivo) throws IOException {
+        File diretorio = new File(caminhoArquivo);
+        if (!diretorio.exists()) {
+            diretorio.mkdirs(); // Cria o diretório se não existir
+        }
+
+        armazenaLegenda = new File(diretorio, nomeArquivo);
+        if (!armazenaLegenda.exists()) {
+            if (armazenaLegenda.createNewFile()) {
+                System.out.println("Arquivo criado com sucesso! " + armazenaLegenda.getName());
+            } else {
+                System.out.println("Não foi possível criar o arquivo.");
+            }
         } else {
-            System.out.println("Não foi possível criar o arquivo.");
+            System.out.println("Arquivo já existe e será sobrescrito.");
         }
     }
 
-    public void escreveArquivo(String nomeArquivo) throws IOException {
-        FileWriter escreveArquivo = new FileWriter(nomeArquivo);
-        escreveArquivo.write(legenda.getTexto());
-        fechaArquivo(escreveArquivo);
+    public void escreveArquivo(String caminhoArquivo, String nomeArquivo) throws IOException {
+        try (FileWriter escreveArquivo = new FileWriter(new File(caminhoArquivo, nomeArquivo), false)) { // Sobrescreve o arquivo
+            escreveArquivo.write(legenda.getTexto());
+        } catch (IOException e) {
+            throw new IOException("Erro ao escrever no arquivo: " + e.getMessage());
+        }
     }
 
-    public void fechaArquivo(FileWriter escreveArquivo) throws IOException {
-        escreveArquivo.close();
+    public void criaEEscreveArquivo(String caminhoArquivo, String nomeArquivo, Legenda legenda) throws IOException {
+        if (!StringUtils.isVazioOuNulo(caminhoArquivo) && !StringUtils.isVazioOuNulo(nomeArquivo) && legenda != null) {
+            setCaminhoArquivo(caminhoArquivo);
+            setNomeArquivo(nomeArquivo);
+            setLegenda(legenda);
+            criaArquivo(caminhoArquivo, nomeArquivo);
+            escreveArquivo(caminhoArquivo, nomeArquivo);
+        } else {
+            throw new IllegalArgumentException("Caminho, nome do arquivo ou legenda estão vazios ou nulos.");
+        }
     }
 
     public static Arquivo buscar(long idArquivo) {
