@@ -1,70 +1,29 @@
 package br.com.code.spring.sublime.tela;
 
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+@Controller
 public class TelaLogin {
-    private JFrame frame;
-    private JTextField textFieldEmail;
-    private JPasswordField passwordFieldSenha;
 
-    public TelaLogin() {
-        initialize();
+    @GetMapping("/login")
+    public String login() {
+        return "login";
     }
 
-    private void initialize() {
-        frame = new JFrame();
-        frame.setBounds(100, 100, 450, 300);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().setLayout(null);
-
-        JLabel lblEmail = new JLabel("Email:");
-        lblEmail.setBounds(35, 70, 100, 16);
-        frame.getContentPane().add(lblEmail);
-
-        textFieldEmail = new JTextField();
-        textFieldEmail.setBounds(150, 70, 200, 26);
-        frame.getContentPane().add(textFieldEmail);
-        textFieldEmail.setColumns(10);
-
-        JLabel lblSenha = new JLabel("Senha:");
-        lblSenha.setBounds(35, 110, 100, 16);
-        frame.getContentPane().add(lblSenha);
-
-        passwordFieldSenha = new JPasswordField();
-        passwordFieldSenha.setBounds(150, 110, 200, 26);
-        frame.getContentPane().add(passwordFieldSenha);
-
-        JButton btnLogin = new JButton("Login");
-        btnLogin.setBounds(150, 150, 100, 29);
-        frame.getContentPane().add(btnLogin);
-        btnLogin.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                realizarLogin();
-            }
-        });
-    }
-
-    private void realizarLogin() {
-        String email = textFieldEmail.getText();
-        String senha = new String(passwordFieldSenha.getPassword());
-
+    @PostMapping("/login")
+    public String loginSubmit(@RequestParam String email, @RequestParam String senha, Model model) {
         boolean loginValido = "pentes@gmail.com".equals(email) && "pentes".equals(senha);
 
         if (loginValido) {
-            JOptionPane.showMessageDialog(frame, "Login realizado com sucesso!");
+            model.addAttribute("mensagem", "Login realizado com sucesso!");
+            return "loginSucesso";
         } else {
-            JOptionPane.showMessageDialog(frame, "Email ou senha incorretos. Tente novamente.");
+            model.addAttribute("mensagem", "Email ou senha incorretos. Tente novamente.");
+            return "login";
         }
-    }
-
-    public void mostrarTela() {
-        frame.setVisible(true);
-    }
-
-    public static void main(String[] args) {
-        TelaLogin telaLogin = new TelaLogin();
-        telaLogin.mostrarTela();
     }
 }
