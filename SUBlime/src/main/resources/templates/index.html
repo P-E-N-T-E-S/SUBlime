@@ -41,56 +41,19 @@
     <div class="categoria">
         <h3>FILMES PARA LEGENDAR HOJE</h3>
         <div class="movie-wrapper">
-            <div class="movie">
+            <div class="movie" data-id="1">
                 <img src="images/howls.jpg" alt="tal filme">
                 <p>Howls Moving Castle</p>
             </div>
-            <div class="movie">
+            <div class="movie" data-id="2">
                 <img src="images/howls.jpg" alt="tal filme">
                 <p>Howls Moving Castle</p>
             </div>
-            <div class="movie">
+            <div class="movie" data-id="3">
                 <img src="images/howls.jpg" alt="tal filme">
                 <p>Howls Moving Castle</p>
             </div>
-            <div class="movie">
-                <img src="images/howls.jpg" alt="tal filme">
-                <p>Howls Moving Castle</p>
-            </div>
-            <div class="movie">
-                <img src="images/howls.jpg" alt="tal filme">
-                <p>Howls Moving Castle</p>
-            </div>
-            <div class="movie">
-                <img src="images/howls.jpg" alt="tal filme">
-                <p>Howls Moving Castle</p>
-            </div>
-        </div>
-    </div>
-    <div class="categoria">
-        <h3>EM ALTA NA LIBREFLIX</h3>
-        <div class="movie-wrapper">
-            <div class="movie">
-                <img src="images/howls.jpg" alt="tal filme">
-                <p>Howls Moving Castle</p>
-            </div>
-            <div class="movie">
-                <img src="images/howls.jpg" alt="tal filme">
-                <p>Howls Moving Castle</p>
-            </div>
-            <div class="movie">
-                <img src="images/howls.jpg" alt="tal filme">
-                <p>Howls Moving Castle</p>
-            </div>
-            <div class="movie">
-                <img src="images/howls.jpg" alt="tal filme">
-                <p>Howls Moving Castle</p>
-            </div>
-            <div class="movie">
-                <img src="images/howls.jpg" alt="tal filme">
-                <p>Howls Moving Castle</p>
-            </div>
-            <div class="movie">
+            <div class="movie" data-id="3">
                 <img src="images/howls.jpg" alt="tal filme">
                 <p>Howls Moving Castle</p>
             </div>
@@ -105,7 +68,7 @@
             <div class="popup-wrapper-item" id="movie-right">
                 <p id="legendar">LEGENDAR</p>
                 <img src="images/howls.jpg" alt="tal filme">
-                <p id="avaliacao">Filme ainda não publicado - Não possue avaliações</p>
+                <p id="avaliacao">Filme ainda não publicado - Não possui avaliações</p>
             </div>
             <div class="popup-wrapper-item">
                 <h3>HOWLS</h3>
@@ -135,6 +98,8 @@
         movies.forEach(function(movie) {
             movie.onclick = function() {
                 popup.style.display = "flex";
+                var filmeId = movie.getAttribute("data-id");
+                window.location.href = "/legenda?id=" + filmeId;
             }
         });
 
