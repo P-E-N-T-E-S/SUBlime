@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/evolventa');
+
+* {
+    font-family: 'Evolventa';
+    color: #EBF5F3;
+    background-color: #111221; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.container img {
+    width: 45%;
+    height: auto;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.login h1 {
+    font-size: 3rem;
+    color: #7CE0CE;
+    font-weight: 600;
+}
+
+.login p, a {
+    color: #7CE0CE;
+    font-family: 'Josefin Sans';
+    text-decoration: underline;
+    background: none;
+}
+
+#crie {
+    margin-top: 2rem;
+}
+
+.login-wrapper {
+    background-color: #1C1B41;
+    width: 40%;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 1vh;
+}
+
+.login-wrapper h3 {
+    color: #7CE0CE;
+    font-family: 'Josefin Sans';
+    font-weight: 500;
+    background: none;
+}
+
+.login-wrapper input {
+    width: 100%;
+    padding: 0.5rem 0.8rem;
+    margin-block: .5rem 1rem;
+    border-radius: 1vh;
+    border: .2rem solid white;
+    background-color: white;
+    color: #EBF5F3;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: none;
+}
+
+.login-wrapper button {
+    border-color: white;
+    background: none;
+    margin-top: 1.5rem;
+    padding: .5rem 4rem;
+    border-radius: 1vh;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.login-wrapper button:hover {
+    background-color: #7CE0CE;
+    border-color: #7CE0CE;
+    color: #111221;
+}
