@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/evolventa');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Josefin Sans';
+    color: #EBF5F3;
+    background-color: #111221; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111221; 
+}
+
+.navbar {
+    display: flex;
+    background-color: #1C1B41;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    overflow: hidden;
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    background-color: #1C1B41;
+    align-items: center;
+}
+
+.navbar-logo {
+    background-color: #1C1B41;
+}
+.navbar-logo img {
+    height: 1.4rem;
+    margin: 1rem;
+    background-color: #1C1B41;
+    margin-top: 1.2rem;
+}
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background-color: #1C1B41;
+}
+
+.navbar-item {
+    background-color: #1C1B41;
+}
+
+.navbar-item a {
+    color: white;
+    margin: 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-weight: 400;
+    background-color: #1C1B41;
+}
+
+.navbar-item a:hover {
+    color: #7CE0CE;
+    background-color: #1C1B41;
+}
+
+.navbar-item i:hover {
+    color: #7CE0CE;
+}
+
+
+.vertical-line {
+    height: 2.2rem;
+    width: 0.05rem;
+    background-color: #A1A1A1;
+    margin: 0 1rem;
+}
+
+.dot-divisor {
+    width: 0.4rem;
+    height: 0.4rem;
+    background-color: white;
+    opacity: 80%;
+    border-radius: 50%;
+}
+
+#perfil a {
+    color: #775EDC; 
+    margin-left: 0;
+    background-color: #1C1B41;
+}
+
+#perfil a:hover {
+    color: #7CE0CE;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border-radius: 4rem;
+    overflow: hidden;
+    border: 0.2rem solid #7CE0CE; 
+}
+
+.search-bar {
+    border: none;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border-radius: 4rem 0 0 4rem;
+    color: #7CE0CE;
+    background-color: #1C1B41;
+}
+
+.search-bar::placeholder {
+    color: #7CE0CE; 
+    opacity: 40%;
+}
+
+.search-bar:focus {
+    outline: none;
+}
+
+.search-btn {
+    border: none;
+    color: #1C1B41;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0 4rem 4rem 0;
+    background-color: #1C1B41;
+}
+
+.search-btn i {
+    color: #7CE0CE;
+}
+
+.header {
+    background-color: #111221;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    overflow: hidden;
+    padding-right: 1rem;
+}
+
+.header img {
+    background-color: #111221;
+    height: 110%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.header h1 {
+    background-color: #111221;
+    font-size: 3.5rem;
+    margin-bottom: 0.8rem;
+    align-self: flex-end;
+    color: #B459B3;
+    font-family: 'Josefin Sans';
+}
+
+.catalogue {
+    padding: 1.5rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.categoria h3{
+    font-family: 'Evolventa';
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #7CE0CE;
+}
+
+.movie-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 0.4rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.movie {
+    max-height: 16rem;
+    padding-inline: 0;
+}
+
+.movie img {
+    border-radius: 5%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.movie img:hover {
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.432), 0 12px 32px 0 rgb(255, 255, 255, 0.432);
+    transition: 0.3s;
+}
+
+.movie p {
+    font-family: 'Josefin Sans';
+    margin-top: 0.2rem;
+}
+
+.open-popup-btn {
+    background-color: #7CE0CE;
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin: 2rem;
+}
+
+.popup {
+    display: none; 
+    position: fixed; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.popup-content {
+    background-color: #111221;
+    padding: 3rem 4rem;
+    width: 80%; 
+    border-radius: 1rem;
+    border-color: #1C1B41;
+    position: sticky;
+    color: #EBF5F3;
+    max-width: 60rem;
+}
+
+.close-btn {
+    font-size: 1.75rem;
+    font-weight: bold;
+    position: absolute;
+    top: 1.2rem;
+    left: 1.6rem;
+    cursor: pointer;
+}
+
+.close-btn:hover i,
+.close-btn:focus {
+    color: #7CE0CE;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.popup-wrapper-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+#movie-right {
+    width: 50%;
+}
+#legendar {
+    opacity: 95%;
+    color: #1C1B41;
+    font-size: 4.6rem;
+    font-weight: 700;
+
+}
+
+.popup-wrapper-item img {
+    padding: 0;
+    margin: 0;
+    border-radius: 3%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.popup-wrapper-item h3 {
+    font-size: 3rem;
+    align-self: flex-start;
+    font-family: 'Evolventa';
+    font-weight: 200;
+}
+
+#avaliacao {
+    font-size: .9rem;
+    font-weight: 400;
+    color: #775EDC;
+    margin: 5%;
+}
+
+#duracao {
+    font-weight: 200;
+    align-self: flex-start;
+}
+
+.idioma-wrapper {
+    background-color: #1C1B41;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 1vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#link-libreflix {
+    text-decoration: underline;
+    margin-top: 2rem;
+    font-weight: 200;
+    color: #DEDEDE;
+}
+
+.idioma-wrapper p, b {
+    background-color: #1C1B41;
+}
+
+.idioma-wrapper label {
+    display: block;
+    margin-top: 2vh;
+    text-align: left;
+    width: 100%;
+}
+
+.idioma-wrapper select {
+    width: 100%;
+    padding-inline: .8rem;
+    padding-block: .5rem;
+    margin-top: 1rem;
+    border-radius: 50vh;
+    background-color: #7CE0CE;
+    font-size: 1rem;
+    color: #1C1B41;
+    cursor: pointer;
+}
+
+.idioma-wrapper select option {
+    background-color: #7CE0CE;
+    color: #1C1B41;
+    font-family: 'Evolventa';
+    font-weight: 800;
+}
+
+.popup-wrapper-item button {
+    margin-top: 1rem;
+    padding: .5rem 3rem;
+    background-color: #7CE0CE;
+    border: none;
+    border-radius: 50vh;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+    color:#1C1B41;
+    font-family: 'Evolventa';
+    font-weight: 800;
+}
+
+.popup-wrapper-item button:hover {
+    background-color: #6d6cc1;
+}
