@@ -20,7 +20,7 @@ public class TelaLogin {
 
         if (loginValido) {
             model.addAttribute("mensagem", "Login realizado com sucesso!");
-            return "loginSucesso";
+            return "redirect:/";
         } else {
             model.addAttribute("mensagem", "Email ou senha incorretos. Tente novamente.");
             return "login";
