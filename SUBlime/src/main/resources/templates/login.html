@@ -9,18 +9,20 @@
 </head>
 <body>
     <div class="container">
-        <img src="/static/images/login.png" alt="Boas vindas ao sublime, Essa é a plataforma de apoio do Libreflix para criação e edição de legendas para obras audiovisuais independentes.">
+        <img src="/images/login.png" alt="Boas vindas ao sublime, Essa é a plataforma de apoio do Libreflix para criação e edição de legendas para obras audiovisuais independentes.">
         <div class="login">
             <h1>FAÇA SEU LOGIN:</h1>
             <div class="login-wrapper">
-                <h3>Login</h3>  
-                <input type="email" placeholder="E-mail" required>
-                <h3 style="margin-top: .5rem">Senha</h3>
-                <input type="password" placeholder="●●●" required>
-                <p><a href="#">Esqueceu a senha?</a></p>
-                <div class="button-container">
-                    <button>ENTRAR</button>
-                </div>
+                <form action="/login" method="post">
+                    <h3>Login</h3>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                    <h3 style="margin-top: .5rem">Senha</h3>
+                    <input type="password" name="senha" placeholder="●●●●●●●●●" required>
+                    <p><a href="#">Esqueceu a senha?</a></p>
+                    <div class="button-container">
+                        <button type="submit">ENTRAR</button>
+                    </div>
+                </form>
             </div>
             <p id="crie"><a href="#">Ainda não tem conta? Crie sua conta aqui</a></p>
         </div>
