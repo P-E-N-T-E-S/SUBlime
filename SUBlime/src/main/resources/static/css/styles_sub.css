@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/evolventa');
+
+* {
+    font-family: 'Evolventa';
+    color: #EBF5F3;
+    background-color: #111221; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    background-color: #1C1B41;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    overflow: hidden;
+}
+
+.navbar-left, .navbar-right, .navbar-center {
+    display: flex;
+    background-color: #1C1B41;
+    align-items: center;
+}
+
+.navbar-center h3 {
+    background: none;
+}
+
+.navbar-list img, a {
+    background: none;
+}
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background-color: #1C1B41;
+}
+
+.navbar-item {
+    background-color: #1C1B41;
+}
+
+.navbar-item a {
+    color: white;
+    margin: .5rem;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-weight: 400;
+    background-color: #1C1B41;
+}
+
+.navbar-item a:hover {
+    color: #7CE0CE;
+    background-color: #1C1B41;
+}
+
+.navbar-item i:hover {
+    color: #7CE0CE;
+}
+
+.vertical-line {
+    height: 2.2rem;
+    width: 0.05rem;
+    background-color: #A1A1A1;
+    margin: 0 1rem;
+}
+
+#revisao {
+    background-color: #775EDC;
+    font-family: 'Josefin Sans';
+    padding: .3rem .8rem;
+    border-radius: 5vh;
+}
+
+#revisao:hover {
+    background-color: #7CE0CE;
+    color: white;
+}
+
+.player {
+    display: flex;
+}
+
+iframe {
+    align-self: center;
+    justify-self: center;
+}
+
+.subtitle {
+    display: flex;
+    background-color: #1C1B41;
+    height: 40vh;
+}
+
+textarea {
+    background-color: white;
+    color: black;
+    padding: .5rem 1rem;
+}

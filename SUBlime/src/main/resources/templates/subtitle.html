@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles_sub.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <title>Sublime</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="#voltar"><i class="fa-solid fa-circle-left fa-2xl" style="color: #775EDC;"></i></a>
+            <div class="vertical-line"></div>
+            <ul class="navbar-list">
+                <li class="navbar-item"><a href="#correcao"><img src="/static/images/correcao.png" alt="correção ortográfica"></a></li>
+                <li class="navbar-item"><a href="#nuvem"><img src="/static/images/nuvem.png" alt="salvar na nuvem"></a></li>
+            </ul>
+        </div>
+        <div class="navbar-center">
+            <h3>HOWLS MOVING CASTLE</h3>
+        </div>
+        <div class="navbar-right">
+            <ul class="navbar-list">
+                <li class="navbar-item"><a href="#revisao" id="revisao">Enviar para revisão</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="player">
+        <iframe width="800" height="485" src="https://www.youtube.com/embed/6ZNC23IzcN0?si=ig4BkfcVD-DJWzqw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="subtitle">
+        <textarea id="sub" name="story" rows="4" cols="200"></textarea>
+    </div>
+</body>
+</html>
