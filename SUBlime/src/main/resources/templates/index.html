@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,21 +41,9 @@
     <div class="categoria">
         <h3>FILMES PARA LEGENDAR HOJE</h3>
         <div class="movie-wrapper">
-            <div class="movie" data-id="1">
-                <img src="images/howls.jpg" alt="tal filme">
-                <p>Howls Moving Castle</p>
-            </div>
-            <div class="movie" data-id="2">
-                <img src="images/howls.jpg" alt="tal filme">
-                <p>Howls Moving Castle</p>
-            </div>
-            <div class="movie" data-id="3">
-                <img src="images/howls.jpg" alt="tal filme">
-                <p>Howls Moving Castle</p>
-            </div>
-            <div class="movie" data-id="3">
-                <img src="images/howls.jpg" alt="tal filme">
-                <p>Howls Moving Castle</p>
+            <div class="movie" th:each="filme : ${obras}" th:data-id="${filme.idObra}">
+                <img th:src="@{${filme.caminhoLink}}" alt="Imagem do Filme">
+                <p th:text="${filme.titulo}"></p>
             </div>
         </div>
     </div>
@@ -90,29 +78,169 @@
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var popup = document.getElementById("popup");
-        var span = document.querySelector(".close-btn");
-        var movies = document.querySelectorAll(".movie");
+    var filmes = [
+    {
+    idObra: 1,
+    titulo: "Howls Moving Castle",
+    duracao: "130min",
+    caminhoLink: "images/howls.jpg",
+    nota: "5.0",
+    idiomaOriginal: "Japonês"
+    },
+    {
+    idObra: 2,
+    titulo: "Spirited Away",
+    duracao: "125min",
+    caminhoLink: "images/spirited.png",
+    nota: "4.8",
+    idiomaOriginal: "Japonês"
+    },
+    {
+    idObra: 3,
+    titulo: "Princess Mononoke",
+    duracao: "134min",
+    caminhoLink: "images/monoke.png",
+    nota: "4.9",
+    idiomaOriginal: "Japonês"
+    },
+    {
+    idObra: 4,
+    titulo: "My Neighbor Totoro",
+    duracao: "86min",
+    caminhoLink: "images/totoro.png",
+    nota: "4.7",
+    idiomaOriginal: "Japonês"
+    },
+    {
+    idObra: 5,
+    titulo: "Nausicaä of the valley of the wind",
+    duracao: "117min",
+    caminhoLink: "images/nausica.png",
+    nota: "4.0",
+    idiomaOriginal: "Japonês"
+    },
+    {
+    idObra: 6,
+    titulo: "Panda go Panda!",
+    duracao: "79min",
+    caminhoLink: "images/panda.png",
+    nota: "4.7",
+    idiomaOriginal: "Japonês"
+    },
+    {
+    idObra: 7,
+    titulo: "Whisper of the Heart",
+    duracao: "96min",
+    caminhoLink: "images/Sussurros.png",
+    nota: "4.7",
+    idiomaOriginal: "Japonês"
+    },
+    {
+    idObra: 8,
+    titulo: "The boy and the Heron",
+    duracao: "124min",
+    caminhoLink: "images/boy.png",
+    nota: "4.7",
+    idiomaOriginal: "Japonês"
+    },
+    {
+    idObra: 9,
+    titulo: "Castle in the sky",
+    duracao: "124min",
+    caminhoLink: "images/castelodoceu.png",
+    nota: "4.7",
+    idiomaOriginal: "Japonês"
+    },
+    {
+    idObra: 10,
+    titulo: "From up on Poppy hill",
+    duracao: "91min",
+    caminhoLink: "images/colina.png",
+    nota: "4.7",
+    idiomaOriginal: "Japonês"
+    },
+    {
+    idObra: 11,
+    titulo: "The Wind Rises",
+    duracao: "126min",
+    caminhoLink: "images/vento.png",
+    nota: "4.7",
+    idiomaOriginal: "Japonês"
+    },
+    {
+    idObra: 12,
+    titulo: "Kiki's Delivery Service",
+    duracao: "102min",
+    caminhoLink: "images/kiki.png",
+    nota: "4.7",
+    idiomaOriginal: "Japonês"
+    },
+    {
+    idObra: 13,
+    titulo: "Ponyo",
+    duracao: "103min",
+    caminhoLink: "images/ponyo.png",
+    nota: "4.7",
+    idiomaOriginal: "Japonês"
+    }
+];
 
-        movies.forEach(function(movie) {
-            movie.onclick = function() {
-                popup.style.display = "flex";
-                var filmeId = movie.getAttribute("data-id");
-                window.location.href = "/legenda?id=" + filmeId;
-            }
+    var popup = document.getElementById("popup");
+    var span = document.querySelector(".close-btn");
+    var movies = document.querySelectorAll(".movie");
+
+    movies.forEach(function(movie) {
+        movie.addEventListener("click", function(event) {
+            event.preventDefault();
+            var filmeId = movie.getAttribute("data-id");
+            openPopup(filmeId);
         });
+    });
 
-        span.onclick = function() {
+    span.onclick = function() {
+        popup.style.display = "none";
+    };
+
+    window.onclick = function(event) {
+        if (event.target == popup) {
             popup.style.display = "none";
         }
+    };
 
-        window.onclick = function(event) {
-            if (event.target == popup) {
-                popup.style.display = "none";
-            }
+    function openPopup(filmeId) {
+        var filme = getFilmeById(filmeId);
+        if (filme) {
+            var popupWrapper = document.querySelector(".popup-wrapper");
+
+            popupWrapper.querySelector("h3").innerText = filme.titulo;
+
+            popupWrapper.querySelector("#movie-right img").src = filme.caminhoLink;
+
+            popupWrapper.querySelector("#avaliacao").innerText = "Avaliação: " + filme.nota;
+
+            popupWrapper.querySelector("#duracao").innerText = "Duração: " + filme.duracao;
+
+            popupWrapper.querySelector(".idioma-wrapper p").innerText = "Idioma Original: " + filme.idiomaOriginal;
+            
+            var legendarButton = popupWrapper.querySelector("button");
+            legendarButton.addEventListener("click", function() {
+                window.location.href = "/legenda/" + filme.idObra;
+            });
+            popup.style.display = "flex";
+        } else {
+            console.log("Filme não encontrado com o ID: " + filmeId);
         }
-    });
+    }
+
+    function getFilmeById(filmeId) {
+        return filmes.find(function(filme) {
+            return filme.idObra == filmeId;
+        });
+    }
 </script>
+
+
+
+
 </body>
 </html>

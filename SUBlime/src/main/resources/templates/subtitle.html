@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/styles_sub.css">
+    <link rel="stylesheet" href="/css/styles_sub.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <title>Sublime</title>
@@ -13,12 +13,12 @@
             <a href="#voltar"><i class="fa-solid fa-circle-left fa-2xl" style="color: #775EDC;"></i></a>
             <div class="vertical-line"></div>
             <ul class="navbar-list">
-                <li class="navbar-item"><a href="#correcao"><img src="/static/images/correcao.png" alt="correção ortográfica"><p>Correção automática</p></a></li>
-                <li class="navbar-item"><a href="#nuvem"><img src="/static/images/nuvem.png" alt="salvar na nuvem"><p>Progresso salvo automaticamente</p></a></li>
+                <li class="navbar-item"><a href="#correcao"><img src="/images/correcao.png" alt="correção ortográfica"><p>Correção automática</p></a></li>
+                <li class="navbar-item"><a href="#nuvem"><img src="/images/nuvem.png" alt="salvar na nuvem"><p>Progresso salvo automaticamente</p></a></li>
             </ul>
         </div>
         <div class="navbar-center">
-            <h3>HOWLS MOVING CASTLE</h3>
+            <h3 th:text="${filme.titulo}"></h3>
         </div>
         <div class="navbar-right">
             <ul class="navbar-list">
@@ -28,15 +28,15 @@
     </nav>
     <div class="player">
         <div class="idiomas">
-            <p>Idioma original: Alemão</p>
+            <p>Idioma original: Japonês</p>
             <p>Legenda: Português</p>
         </div>
         <div class="video-player">
-            <iframe width="800" height="485" src="https://www.youtube.com/embed/6ZNC23IzcN0?si=ig4BkfcVD-DJWzqw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="800" height="485" src="https://www.youtube.com/watch?v=iwROgK94zcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="icons">
-            <a href="#correcao"><img src="/static/images/duvida.png" alt="duvida"></a>
-            <a href="#correcao"><img src="/static/images/notas.png" alt="notas"></a>
+            <a href="#correcao"><img src="/images/duvida.png" alt="duvida"></a>
+            <a href="#correcao"><img src="/images/notas.png" alt="notas"></a>
         </div>
     </div>
     <div class="subtitle">
