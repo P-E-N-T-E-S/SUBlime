@@ -16,22 +16,20 @@
         <a href="http://localhost:8080" class="navbar-logo"><img src="images/sublime.png" alt="Logo"></a>
         <div class="vertical-line"></div>
         <ul class="navbar-list">
-            <li class="navbar-item"><a href="#favs">Favoritados</a></li>
-            <div class="dot-divisor"></div>
             <li class="navbar-item"><a href="#projetos">Seus projetos</a></li>
         </ul>
     </div>
     <div class="navbar-right">
-        <div class="navbar-item"><a href="#ajuda"><i class="fa-solid fa-circle-question fa-xl" style="color: #7CE0CE"></i></a></div>
+        <div class="navbar-item"><a href="#ajuda"><img src="images/duvida.png" alt="duvida" style="margin-right: .6rem; margin-top: .3rem"></a></div>
         <div class="search-container">
             <form action="/search" method="get">
                 <input type="text" name="query" placeholder="Pesquise aqui..." class="search-bar">
-                <button type="submit" class="search-btn"><i class="fas fa-search fa-xl"></i></button>
+                <button type="submit" class="search-btn"><i class="fas fa-search fa-lg"></i></button>
             </form>
         </div>
         <div class="vertical-line"></div>
         <ul class="navbar-list">
-            <li class="navbar-item" id="perfil"><a href="#perfil">SEU PERFIL <i class="fa-regular fa-circle-user fa-xl" style="color: #775EDC; margin-left: 0.2rem;"></i></a></li>
+            <li class="navbar-item" id="perfil"><a href="#perfil"><img src="images/profile.png" alt="pesquisar" style="background:none;"></a></li>
         </ul>
     </div>
 </nav>
@@ -75,12 +73,11 @@
                     </select>
                 </div>
                 <button>LEGENDAR</button>
-                <p id="link-libreflix">Ver no LibreFlix</p>
+                <p id="link-libreflix"><a href="#Link">Ver no LibreFlix</a></p>
             </div>
         </div>
     </div>
 </div>
-
 <script>
     var filmes = [
         {
