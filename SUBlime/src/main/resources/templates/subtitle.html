@@ -13,8 +13,8 @@
             <a href="#voltar"><i class="fa-solid fa-circle-left fa-2xl" style="color: #775EDC;"></i></a>
             <div class="vertical-line"></div>
             <ul class="navbar-list">
-                <li class="navbar-item"><a href="#correcao"><img src="/static/images/correcao.png" alt="correção ortográfica"></a></li>
-                <li class="navbar-item"><a href="#nuvem"><img src="/static/images/nuvem.png" alt="salvar na nuvem"></a></li>
+                <li class="navbar-item"><a href="#correcao"><img src="/static/images/correcao.png" alt="correção ortográfica"><p>Correção automática</p></a></li>
+                <li class="navbar-item"><a href="#nuvem"><img src="/static/images/nuvem.png" alt="salvar na nuvem"><p>Progresso salvo automaticamente</p></a></li>
             </ul>
         </div>
         <div class="navbar-center">
@@ -27,10 +27,20 @@
         </div>
     </nav>
     <div class="player">
-        <iframe width="800" height="485" src="https://www.youtube.com/embed/6ZNC23IzcN0?si=ig4BkfcVD-DJWzqw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="idiomas">
+            <p>Idioma original: Alemão</p>
+            <p>Legenda: Português</p>
+        </div>
+        <div class="video-player">
+            <iframe width="800" height="485" src="https://www.youtube.com/embed/6ZNC23IzcN0?si=ig4BkfcVD-DJWzqw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="icons">
+            <a href="#correcao"><img src="/static/images/duvida.png" alt="duvida"></a>
+            <a href="#correcao"><img src="/static/images/notas.png" alt="notas"></a>
+        </div>
     </div>
     <div class="subtitle">
-        <textarea id="sub" name="story" rows="4" cols="200"></textarea>
+        <textarea id="sub" name="story" rows="10" cols="200" placeholder="00:00:00 - Digite a legenda aqui..."></textarea>
     </div>
 </body>
 </html>

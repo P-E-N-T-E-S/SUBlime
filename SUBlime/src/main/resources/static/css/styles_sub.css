@@ -25,6 +25,9 @@
     align-items: center;
 }
 
+.navbar-center {
+    width: 35%;
+}
 .navbar-center h3 {
     background: none;
 }
@@ -47,13 +50,24 @@
 }
 
 .navbar-item a {
-    color: white;
+    color: #775EDC;
+    font-family: 'Josefin Sans';
     margin: .5rem;
     text-align: center;
     text-decoration: none;
-    display: block;
+    display: flex;
     font-weight: 400;
-    background-color: #1C1B41;
+    background: none;
+}
+
+.navbar-item p {
+    color: #775EDC;
+    font-family: 'Josefin Sans';
+    margin: .5rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 400;
+    background: none;
 }
 
 .navbar-item a:hover {
@@ -77,6 +91,7 @@
     font-family: 'Josefin Sans';
     padding: .3rem .8rem;
     border-radius: 5vh;
+    color: white;
 }
 
 #revisao:hover {
@@ -86,21 +101,77 @@
 
 .player {
     display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
 }
 
-iframe {
-    align-self: center;
-    justify-self: center;
+.video-player iframe {
+    max-width: 90%;
+    max-height: 90%;
+    margin-right:9.8rem;
+}
+
+.idiomas, .icons {
+    flex-shrink: 0;
+    align-self: flex-start;
+}
+
+.idiomas p {
+    color: #775EDC;
+    font-family: 'Josefin Sans';
+    margin: .5rem;
+    text-align: left;
+    text-decoration: none;
+    font-weight: 400;
+    background: none;
+    margin-left: 1.2rem;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    margin-right: 1.4rem;
+}
+
+.icons a {
+    margin-bottom: 1rem;
 }
 
 .subtitle {
     display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #1C1B41;
-    height: 40vh;
+    height: 42.3vh;
 }
 
-textarea {
+#sub {
     background-color: white;
     color: black;
     padding: .5rem 1rem;
+    border-radius: 2vh;
+    height: 20rem;
+    resize: none;
+    overflow-y: scroll; 
+}
+
+.subtitle textarea::-webkit-scrollbar {
+    width: .9rem;
+}
+
+.subtitle textarea::-webkit-scrollbar-track {
+    background-color: #775EDC; 
+    border-radius: 10vh;
+    opacity: 50%;
+}
+
+.subtitle textarea::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 5vh;
+    width: .4rem;
+}
+
+.subtitle textarea::-webkit-scrollbar-thumb:hover {
+    background-color: #5BB5A9; 
 }
