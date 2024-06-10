@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
 <body>
 <nav class="navbar">
     <div class="navbar-left">
-        <a href="#home" class="navbar-logo"><img src="images/sublime.png" alt="Logo"></a>
+        <a href="http://localhost:8080" class="navbar-logo"><img src="images/sublime.png" alt="Logo"></a>
         <div class="vertical-line"></div>
         <ul class="navbar-list">
             <li class="navbar-item"><a href="#favs">Favoritados</a></li>
@@ -22,8 +23,10 @@
     <div class="navbar-right">
         <div class="navbar-item"><a href="#ajuda"><i class="fa-solid fa-circle-question fa-xl" style="color: #7CE0CE"></i></a></div>
         <div class="search-container">
-            <input type="text" placeholder="Pesquise aqui..." class="search-bar">
-            <button class="search-btn"><i class="fas fa-search fa-xl"></i></button>
+            <form action="/search" method="get">
+                <input type="text" name="query" placeholder="Pesquise aqui..." class="search-bar">
+                <button type="submit" class="search-btn"><i class="fas fa-search fa-xl"></i></button>
+            </form>
         </div>
         <div class="vertical-line"></div>
         <ul class="navbar-list">
@@ -79,111 +82,112 @@
 
 <script>
     var filmes = [
-    {
-    idObra: 1,
-    titulo: "Howls Moving Castle",
-    duracao: "130min",
-    caminhoLink: "images/howls.jpg",
-    nota: "5.0",
-    idiomaOriginal: "Japonês"
-    },
-    {
-    idObra: 2,
-    titulo: "Spirited Away",
-    duracao: "125min",
-    caminhoLink: "images/spirited.png",
-    nota: "4.8",
-    idiomaOriginal: "Japonês"
-    },
-    {
-    idObra: 3,
-    titulo: "Princess Mononoke",
-    duracao: "134min",
-    caminhoLink: "images/monoke.png",
-    nota: "4.9",
-    idiomaOriginal: "Japonês"
-    },
-    {
-    idObra: 4,
-    titulo: "My Neighbor Totoro",
-    duracao: "86min",
-    caminhoLink: "images/totoro.png",
-    nota: "4.7",
-    idiomaOriginal: "Japonês"
-    },
-    {
-    idObra: 5,
-    titulo: "Nausicaä of the valley of the wind",
-    duracao: "117min",
-    caminhoLink: "images/nausica.png",
-    nota: "4.0",
-    idiomaOriginal: "Japonês"
-    },
-    {
-    idObra: 6,
-    titulo: "Panda go Panda!",
-    duracao: "79min",
-    caminhoLink: "images/panda.png",
-    nota: "4.7",
-    idiomaOriginal: "Japonês"
-    },
-    {
-    idObra: 7,
-    titulo: "Whisper of the Heart",
-    duracao: "96min",
-    caminhoLink: "images/Sussurros.png",
-    nota: "4.7",
-    idiomaOriginal: "Japonês"
-    },
-    {
-    idObra: 8,
-    titulo: "The boy and the Heron",
-    duracao: "124min",
-    caminhoLink: "images/boy.png",
-    nota: "4.7",
-    idiomaOriginal: "Japonês"
-    },
-    {
-    idObra: 9,
-    titulo: "Castle in the sky",
-    duracao: "124min",
-    caminhoLink: "images/castelodoceu.png",
-    nota: "4.7",
-    idiomaOriginal: "Japonês"
-    },
-    {
-    idObra: 10,
-    titulo: "From up on Poppy hill",
-    duracao: "91min",
-    caminhoLink: "images/colina.png",
-    nota: "4.7",
-    idiomaOriginal: "Japonês"
-    },
-    {
-    idObra: 11,
-    titulo: "The Wind Rises",
-    duracao: "126min",
-    caminhoLink: "images/vento.png",
-    nota: "4.7",
-    idiomaOriginal: "Japonês"
-    },
-    {
-    idObra: 12,
-    titulo: "Kiki's Delivery Service",
-    duracao: "102min",
-    caminhoLink: "images/kiki.png",
-    nota: "4.7",
-    idiomaOriginal: "Japonês"
-    },
-    {
-    idObra: 13,
-    titulo: "Ponyo",
-    duracao: "103min",
-    caminhoLink: "images/ponyo.png",
-    nota: "4.7",
-    idiomaOriginal: "Japonês"
-    }
-];
+        {
+            idObra: 1,
+            titulo: "Howls Moving Castle",
+            duracao: "130min",
+            caminhoLink: "images/howls.jpg",
+            nota: "5.0",
+            idiomaOriginal: "Japonês"
+        },
+        {
+            idObra: 2,
+            titulo: "Spirited Away",
+            duracao: "125min",
+            caminhoLink: "images/spirited.png",
+            nota: "4.8",
+            idiomaOriginal: "Japonês"
+        },
+        {
+            idObra: 3,
+            titulo: "Princess Mononoke",
+            duracao: "134min",
+            caminhoLink: "images/monoke.png",
+            nota: "4.9",
+            idiomaOriginal: "Japonês"
+        },
+        {
+            idObra: 4,
+            titulo: "My Neighbor Totoro",
+            duracao: "86min",
+            caminhoLink: "images/totoro.png",
+            nota: "4.7",
+            idiomaOriginal: "Japonês"
+        },
+        {
+            idObra: 5,
+            titulo: "Nausicaä of the valley of the wind",
+            duracao: "117min",
+            caminhoLink: "images/nausica.png",
+            caminhoLink: "images/nausica.png",
+            nota: "4.0",
+            idiomaOriginal: "Japonês"
+        },
+        {
+            idObra: 6,
+            titulo: "Panda go Panda!",
+            duracao: "79min",
+            caminhoLink: "images/panda.png",
+            nota: "4.7",
+            idiomaOriginal: "Japonês"
+        },
+        {
+            idObra: 7,
+            titulo: "Whisper of the Heart",
+            duracao: "96min",
+            caminhoLink: "images/Sussurros.png",
+            nota: "4.7",
+            idiomaOriginal: "Japonês"
+        },
+        {
+            idObra: 8,
+            titulo: "The boy and the Heron",
+            duracao: "124min",
+            caminhoLink: "images/boy.png",
+            nota: "4.7",
+            idiomaOriginal: "Japonês"
+        },
+        {
+            idObra: 9,
+            titulo: "Castle in the sky",
+            duracao: "124min",
+            caminhoLink: "images/castelodoceu.png",
+            nota: "4.7",
+            idiomaOriginal: "Japonês"
+        },
+        {
+            idObra: 10,
+            titulo: "From up on Poppy hill",
+            duracao: "91min",
+            caminhoLink: "images/colina.png",
+            nota: "4.7",
+            idiomaOriginal: "Japonês"
+        },
+        {
+            idObra: 11,
+            titulo: "The Wind Rises",
+            duracao: "126min",
+            caminhoLink: "images/vento.png",
+            nota: "4.7",
+            idiomaOriginal: "Japonês"
+        },
+        {
+            idObra: 12,
+            titulo: "Kiki's Delivery Service",
+            duracao: "102min",
+            caminhoLink: "images/kiki.png",
+            nota: "4.7",
+            idiomaOriginal: "Japonês"
+        },
+        {
+            idObra: 13,
+            titulo: "Ponyo",
+            duracao: "103min",
+            caminhoLink: "images/ponyo.png",
+            nota: "4.7",
+            idiomaOriginal: "Japonês"
+        }
+    ];
 
     var popup = document.getElementById("popup");
     var span = document.querySelector(".close-btn");
@@ -240,9 +244,5 @@
         });
     }
 </script>
-
-
-
-
 </body>
 </html>
