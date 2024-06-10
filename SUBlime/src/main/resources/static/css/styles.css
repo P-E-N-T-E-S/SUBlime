@@ -179,14 +179,15 @@ body {
 .movie-wrapper {
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
     margin-top: 0.4rem;
-    gap: 1rem;
     margin-bottom: 2rem;
 }
 
 .movie {
-    max-height: 16rem;
-    padding-inline: 0;
+    max-height: 10rem;
+    width: calc(20% - 4rem);
+    margin-bottom: 4rem;
 }
 
 .movie img {

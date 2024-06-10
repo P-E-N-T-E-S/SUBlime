@@ -189,6 +189,8 @@
     var span = document.querySelector(".close-btn");
     var movies = document.querySelectorAll(".movie");
 
+    popup.style.display = "none";
+
     movies.forEach(function(movie) {
         movie.addEventListener("click", function(event) {
             event.preventDefault();
@@ -221,7 +223,7 @@
             popupWrapper.querySelector("#duracao").innerText = "Duração: " + filme.duracao;
 
             popupWrapper.querySelector(".idioma-wrapper p").innerText = "Idioma Original: " + filme.idiomaOriginal;
-            
+
             var legendarButton = popupWrapper.querySelector("button");
             legendarButton.addEventListener("click", function() {
                 window.location.href = "/legenda/" + filme.idObra;
