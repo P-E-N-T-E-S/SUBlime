@@ -56,6 +56,12 @@ public class TelaCatalogo {
 
         obras.add(new Filme(13, "Ponyo", "103min", "Diretor GHI", 2008,
                 "Tipo de Filme", 4.1, 13, null, "/images/ponyo.png"));
+
+        obras.add(new Filme(14, "The tale of princess kaguya", "137min", "Diretor GHI", 2013,
+                "Tipo de Filme", 4.7, 14, null, "/images/o-conto-da-princesa-kaguya-netflix.png"));
+
+        obras.add(new Filme(15, "Castle of Cagliostro", "110min", "Diretor GHI", 1979,
+                "Tipo de Filme", 4.7, 15, null, "/images/LupinIII.png"));
     }
 
     public List<Filme> getObras() {
