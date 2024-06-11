@@ -1,76 +1,41 @@
 package br.com.code.spring.sublime.tela;
 
-import br.com.code.spring.sublime.legenda.Legenda;
-import br.com.code.spring.sublime.utils.StringUtils;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Paths;
 
+@Controller
 public class TelaLegenda {
-    private JFrame frame;
-    private JTextArea textAreaLegenda;
 
-    public TelaLegenda() {
-        initialize();
+    @GetMapping("/legenda")
+    public String legenda() {
+        return "subtitle";
     }
 
-    private void initialize() {
-        frame = new JFrame();
-        frame.setBounds(100, 100, 450, 300);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().setLayout(null);
-
-        JLabel lblEscreverLegenda = new JLabel("Escrever Legenda:");
-        lblEscreverLegenda.setBounds(35, 30, 200, 16);
-        frame.getContentPane().add(lblEscreverLegenda);
-
-        JScrollPane scrollPane = new JScrollPane();
-        scrollPane.setBounds(35, 60, 350, 150);
-        frame.getContentPane().add(scrollPane);
-
-        textAreaLegenda = new JTextArea();
-        scrollPane.setViewportView(textAreaLegenda);
-
-        JButton btnSalvar = new JButton("Salvar");
-        btnSalvar.setBounds(150, 230, 100, 29);
-        frame.getContentPane().add(btnSalvar);
-        btnSalvar.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                salvarLegenda();
-            }
-        });
-    }
-
-    private void salvarLegenda() {
-        String legendaTexto = textAreaLegenda.getText();
-
-        if (!StringUtils.isVazioOuNulo(legendaTexto)) {
-            Legenda legenda = new Legenda(1, legendaTexto, "Português", 1, 5.0); // Exemplo de inicialização
-
-            try {
-                legenda.salvarLegenda("textos/", "legenda.txt");
-                JOptionPane.showMessageDialog(frame, "Legenda salva com sucesso!");
-                limparCampos();
-            } catch (IOException e) {
-                JOptionPane.showMessageDialog(frame, "Erro ao salvar a legenda: " + e.getMessage());
-            }
-        } else {
-            JOptionPane.showMessageDialog(frame, "O texto da legenda está vazio!");
+    @PostMapping("legenda")
+    public String saveLegenda(@RequestParam("legenda") String legenda, Model model) {
+        try {
+            String fileName = "legenda.txt";
+            saveLegendaToFile(legenda, fileName);
+            model.addAttribute("mensagem", "Legenda salva com sucesso!");
+        } catch (IOException e) {
+            model.addAttribute("mensagem", "Erro ao salvar a legenda.");
+            e.printStackTrace();
         }
+        return "subtitle";
     }
 
-    private void limparCampos() {
-        textAreaLegenda.setText("");
-    }
-
-    public void mostrarTela() {
-        frame.setVisible(true);
-    }
-
-    public static void main(String[] args) {
-        TelaLegenda telaLegenda = new TelaLegenda();
-        telaLegenda.mostrarTela();
+    private void saveLegendaToFile(String legenda, String fileName) throws IOException {
+        String filePath = Paths.get(System.getProperty("user.dir"), fileName).toString();
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            writer.write(legenda);
+        }
     }
 }

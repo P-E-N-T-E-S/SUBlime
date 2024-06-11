@@ -9,7 +9,7 @@
     <title>Sublime</title>
 </head>
 <body>
-    <form action="/subtitle" method="get">
+    <form action="/legenda" method="post">
     <nav class="navbar">
         <div class="navbar-left">
             <a href="/"><i class="fa-solid fa-circle-left fa-2xl" style="color: #775EDC;"></i></a>
@@ -20,11 +20,12 @@
             </ul>
         </div>
         <div class="navbar-center">
-            <h3 th:text="${filme.titulo}"></h3>
         </div>
         <div class="navbar-right">
             <ul class="navbar-list">
-                <li class="navbar-item"><a href="#revisao" id="revisao">Enviar para revisão</a></li>
+                <li class="navbar-item">
+                    <button type="submit" id="revisao">Enviar para revisão</button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -42,8 +43,9 @@
         </div>
     </div>
     <div class="subtitle">
-        <textarea id="sub" name="story" rows="10" cols="200" placeholder="00:00:00 - Digite a legenda aqui..."></textarea>
+        <textarea name ="legenda" id="sub" rows="10" cols="200" placeholder="00:00:00 - Digite a legenda aqui..."></textarea>
     </div>
     </form>
+    <p th:text="${mensagem}" style="color:green;"></p>
 </body>
 </html>
