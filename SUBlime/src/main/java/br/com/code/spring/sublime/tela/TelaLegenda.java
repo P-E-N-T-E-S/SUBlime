@@ -14,6 +14,8 @@ import java.nio.file.Paths;
 @Controller
 public class TelaLegenda {
 
+    private static int contadorLegenda = 1;
+
     @GetMapping("/legenda")
     public String legenda() {
         return "subtitle";
@@ -22,9 +24,10 @@ public class TelaLegenda {
     @PostMapping("legenda")
     public String saveLegenda(@RequestParam("legenda") String legenda, Model model) {
         try {
-            String fileName = "legenda.txt";
-            saveLegendaToFile(legenda, fileName);
+            String fileName = "legenda_" + contadorLegenda + ".txt";
+            saveLegendaToFile(legenda, "textos/" + fileName);
             model.addAttribute("mensagem", "Legenda salva com sucesso!");
+            contadorLegenda++;
         } catch (IOException e) {
             model.addAttribute("mensagem", "Erro ao salvar a legenda.");
             e.printStackTrace();
