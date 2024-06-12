@@ -124,7 +124,7 @@ Se você deseja contribuir com este repositório, siga estas etapas:
   </li>
   <li>
     <a  href="https://www.figma.com/design/6TWhj6ZsTJszeTfigWxDIr/prot%C3%B3tipo-de-alta?node-id=0-1"
-      >ScreenCast - Protótipo de Alta</a
+      >Protótipo de Alta</a
     >
   </li>
   </li>
