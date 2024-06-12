@@ -90,7 +90,7 @@ Se você deseja contribuir com este repositório, siga estas etapas:
     >
   </li>
   <li>
-    <a  href="https://miro.com/app/board/uXjVKPxfMps=/?share_link_id=204390211874"
+    <a  href="https://drive.google.com/file/d/13mw6zXzHFx-cdkf6Z8z618XEMM_5R1Tb/view?usp=sharing"
       >Diagrama de Classes</a
     >
   </li>
@@ -108,38 +108,33 @@ Se você deseja contribuir com este repositório, siga estas etapas:
 <summary>SR2</summary>
 <ul>
   <li>
-    <a  href=""
+    <a  href="https://youtu.be/1A02IdR7pL4"
       >ScreenCast - Uso do Sistema</a
     >
   </li>
   <li>
-    <a  href=""
-      >ScreenCast - Protótipo de Baixa (Usuário)</a
+    <a  href="https://www.figma.com/file/ME0MIPGPEdVN3fnxUn5nZm/SR1-G7?type=design&node-id=78%3A282&mode=design&t=jkP3DsALK9V5ZM6u-1"
+      >Protótipo de Baixa</a
     >
   </li>
   <li>
-    <a  href=""
+    <a  href="https://youtu.be/lhjmrrAkc8U"
       >ScreenCast - Protótipo de Baixa</a
     >
   </li>
   <li>
-    <a  href=""
+    <a  href="https://www.figma.com/design/6TWhj6ZsTJszeTfigWxDIr/prot%C3%B3tipo-de-alta?node-id=0-1"
       >ScreenCast - Protótipo de Alta</a
     >
   </li>
-  <li>
-    <a  href=""
-      >Protótipo de Baixa</a
-    >
-  </li>
   </li>
   <li>
-    <a  href=""
-      >Programação em par</a
+    <a  href="https://drive.google.com/file/d/13mw6zXzHFx-cdkf6Z8z618XEMM_5R1Tb/view?usp=sharing"
+      >Diagrama UML</a
     >
   </li>
   <li>
-    <a  href=""
+    <a  href="https://docs.google.com/document/d/1wFz7SzBdo2L3zbgBy0N4Jn3ePgD-kvWxSNDXSMr46Ag/edit?usp=sharing"
       >Histórias</a
     >
   </li>
