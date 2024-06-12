@@ -182,7 +182,7 @@ Se você deseja contribuir com este repositório, siga estas etapas:
     <a href="https://github.com/Nerebo">André Goes</a> - algcf@cesar.school 📩
   </li>
   <li>
-    <a href="https://github.com/Tiagopbc">Tiago Cavalcanti</a> - tpbc@cesar.school 📩
+    <a href="https://github.com/Tiagopbc">Tiago P. Cavalcanti</a> - tpbc@cesar.school 📩
   </li>
 </ul>
 
